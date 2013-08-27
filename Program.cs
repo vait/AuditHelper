@@ -92,8 +92,24 @@ namespace AuditHelper
                 {
                     tmp = DB.ApplicationMap.LevelsOfRisk[id];
                 }
-               
 
+                worker.ReportProgress(0, "Загрузка организаций...");
+
+                ids = DB.ApplicationDataMappers.OutsideOrgDM.GetAllIDs();
+
+                foreach (int id in ids)
+                {
+                    tmp = DB.ApplicationMap.OutsideOrg[id];
+                }
+
+                worker.ReportProgress(0, "Загрузка сотрудников...");
+
+                ids = DB.ApplicationDataMappers.OutsideEmpDM.GetAllIDs();
+
+                foreach (int id in ids)
+                {
+                    tmp = DB.ApplicationMap.OutsideEmp[id];
+                }
             }
         }
 

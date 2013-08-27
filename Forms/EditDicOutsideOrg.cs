@@ -12,7 +12,7 @@ using AuditHelper.Classes;
 
 namespace AuditHelper.Forms
 {
-    public partial class EditDicLevelOfRisk : Form
+    public partial class EditDicOutsideOrg : Form
     {
         private int _editableId = -1;
         public int EditableId
@@ -20,9 +20,9 @@ namespace AuditHelper.Forms
             get { return _editableId; }
             set { _editableId = value; }
         }
-        private LevelOfRisk _entity = null;
+        private OutsideOrg _entity = null;
 
-        public EditDicLevelOfRisk()
+        public EditDicOutsideOrg()
         {
             InitializeComponent();
         }
@@ -31,8 +31,9 @@ namespace AuditHelper.Forms
         {
             if (this._editableId != -1)
             {
-                this._entity = ApplicationMap.LevelsOfRisk[this._editableId];
+                this._entity = ApplicationMap.OutsideOrg[this._editableId];
                 this.nameTB.Text = _entity.Name;
+                this.fullNameTB.Text = _entity.FullName;
             }
         }
 
@@ -53,12 +54,13 @@ namespace AuditHelper.Forms
             if (this._editableId != -1)
             {
                 this._entity.Name = nameTB.Text.Trim();
-                ApplicationMap.LevelsOfRisk[this._editableId] = this._entity;
+                this._entity.FullName = fullNameTB.Text.Trim();
+                ApplicationMap.OutsideOrg[this._editableId] = this._entity;
             }
             else
             {
-                this._entity = new LevelOfRisk(this.nameTB.Text.Trim());
-                ApplicationMap.LevelsOfRisk[this._editableId] = this._entity;
+                this._entity = new OutsideOrg(this.fullNameTB.Text.Trim(), this.nameTB.Text.Trim());
+                ApplicationMap.OutsideOrg[this._editableId] = this._entity;
             }
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;

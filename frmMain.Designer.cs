@@ -70,12 +70,14 @@
             this.организацииToolStripMenuItem.Name = "организацииToolStripMenuItem";
             this.организацииToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.организацииToolStripMenuItem.Text = "Организации";
+            this.организацииToolStripMenuItem.Click += new System.EventHandler(this.организацииToolStripMenuItem_Click);
             // 
             // должностиToolStripMenuItem
             // 
             this.должностиToolStripMenuItem.Name = "должностиToolStripMenuItem";
             this.должностиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.должностиToolStripMenuItem.Text = "Сотрудники";
+            this.должностиToolStripMenuItem.Click += new System.EventHandler(this.должностиToolStripMenuItem_Click);
             // 
             // уровниРискаToolStripMenuItem
             // 

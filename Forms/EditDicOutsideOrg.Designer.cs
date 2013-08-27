@@ -1,6 +1,6 @@
 ﻿namespace AuditHelper.Forms
 {
-    partial class EditDicLevelOfRisk
+    partial class EditDicOutsideOrg
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.fullNameTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // nameTB
@@ -46,14 +48,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Название";
+            this.label1.Text = "Краткое название";
             // 
             // saveBtn
             // 
             this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.saveBtn.Location = new System.Drawing.Point(12, 61);
+            this.saveBtn.Location = new System.Drawing.Point(12, 129);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(75, 23);
             this.saveBtn.TabIndex = 2;
@@ -64,7 +66,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(269, 61);
+            this.cancelBtn.Location = new System.Drawing.Point(269, 129);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelBtn.TabIndex = 3;
@@ -72,13 +74,32 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // EditDicLevelOfRisk
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Полное название";
+            // 
+            // fullNameTB
+            // 
+            this.fullNameTB.Location = new System.Drawing.Point(12, 64);
+            this.fullNameTB.Multiline = true;
+            this.fullNameTB.Name = "fullNameTB";
+            this.fullNameTB.Size = new System.Drawing.Size(332, 59);
+            this.fullNameTB.TabIndex = 1;
+            // 
+            // EditDicOutsideOrg
             // 
             this.AcceptButton = this.saveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(356, 96);
+            this.ClientSize = new System.Drawing.Size(356, 165);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.fullNameTB);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.label1);
@@ -86,7 +107,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "EditDicLevelOfRisk";
+            this.Name = "EditDicOutsideOrg";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Редактор";
@@ -102,5 +123,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox fullNameTB;
     }
 }

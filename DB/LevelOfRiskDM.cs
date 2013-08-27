@@ -53,7 +53,7 @@ namespace AuditHelper.DB
             if (aEntity == null)
                 return false;
 
-            LevelOfRisk tmp = aEntity as LevelOfRisk;
+            LevelOfRisk tmp = aEntity;
 
             if (_adapter.Delete(tmp.Id) >= 1)
                 return true;
@@ -65,7 +65,7 @@ namespace AuditHelper.DB
             if (aEntity == null)
                 return false;
 
-            LevelOfRisk tmp = aEntity as LevelOfRisk;
+            LevelOfRisk tmp = aEntity;
 
             if (_adapter.Update(tmp.Name, tmp.Id) > 1)
                 return true;

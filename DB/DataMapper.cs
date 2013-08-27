@@ -23,6 +23,8 @@ namespace AuditHelper.DB
     static class ApplicationDataMappers
     {
         public static readonly LevelOfRiskDM LevelsOfRiskDM = new LevelOfRiskDM();
+        public static readonly OutsideOrgDM OutsideOrgDM = new OutsideOrgDM();
+        public static readonly OutsideEmpDM OutsideEmpDM = new OutsideEmpDM();
     }
 
 

@@ -103,5 +103,18 @@ namespace AuditHelper.DB
                 ApplicationDataMappers.LevelsOfRiskDM.Update, 
                 ApplicationDataMappers.LevelsOfRiskDM.Insert,
                 ApplicationDataMappers.LevelsOfRiskDM.Delete);
+
+        public static readonly EntityMap<OutsideOrg> OutsideOrg =
+            new EntityMap<OutsideOrg>(id => ApplicationDataMappers.OutsideOrgDM.GetByID(id),
+                ApplicationDataMappers.OutsideOrgDM.Update,
+                ApplicationDataMappers.OutsideOrgDM.Insert,
+                ApplicationDataMappers.OutsideOrgDM.Delete);
+
+        public static readonly EntityMap<OutsideEmp> OutsideEmp =
+            new EntityMap<OutsideEmp>(id => ApplicationDataMappers.OutsideEmpDM.GetByID(id),
+                ApplicationDataMappers.OutsideEmpDM.Update,
+                ApplicationDataMappers.OutsideEmpDM.Insert,
+                ApplicationDataMappers.OutsideEmpDM.Delete);
+
     }
 }

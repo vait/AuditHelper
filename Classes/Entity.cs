@@ -21,7 +21,7 @@ namespace AuditHelper.Classes
 
         public override bool Equals(object obj)
         {
-            return this._id.Equals(obj);
+            return obj is Entity ? this._id.Equals((obj as Entity).Id) : false;
         }
 
         public override int GetHashCode()
@@ -43,8 +43,9 @@ namespace AuditHelper.Classes
         internal SimpleEntity(string aName, int aId = -1)
             : base(aId)
         {
-            _name = aName;
+            _name = aName.Trim();
         }
+
         public override string ToString()
         {
             return this._name;

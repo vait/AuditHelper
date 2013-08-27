@@ -45,7 +45,13 @@
   <ItemGroup>
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\LevelOfRisk.cs" />
+    <Compile Include="Classes\OutsideEmp.cs" />
+    <Compile Include="Classes\OutsideOrg.cs" />
     <Compile Include="Classes\Plan.cs" />
+    <Compile Include="DB\auditHelperDataSet.cs">
+      <DependentUpon>auditHelperDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DB\auditHelperDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -54,11 +60,37 @@
     <Compile Include="DB\DataMapper.cs" />
     <Compile Include="DB\IdentityMap.cs" />
     <Compile Include="DB\LevelOfRiskDM.cs" />
+    <Compile Include="DB\OutsideEmpDM.cs" />
+    <Compile Include="DB\OutsideOrgDM.cs" />
+    <Compile Include="Forms\DicOutsideEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DicOutsideEmp.Designer.cs">
+      <DependentUpon>DicOutsideEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditDicOutsideEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditDicOutsideEmp.Designer.cs">
+      <DependentUpon>EditDicOutsideEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditDicOutsideOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditDicOutsideOrg.Designer.cs">
+      <DependentUpon>EditDicOutsideOrg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DicLevelOfRisk.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DicLevelOfRisk.Designer.cs">
       <DependentUpon>DicLevelOfRisk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DicOutsideOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DicOutsideOrg.Designer.cs">
+      <DependentUpon>DicOutsideOrg.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditDicLevelOfRisk.cs">
       <SubType>Form</SubType>
@@ -80,8 +112,20 @@
     <Compile Include="frmTestEnvironment.Designer.cs">
       <DependentUpon>frmTestEnvironment.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\DicOutsideEmp.resx">
+      <DependentUpon>DicOutsideEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditDicOutsideEmp.resx">
+      <DependentUpon>EditDicOutsideEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditDicOutsideOrg.resx">
+      <DependentUpon>EditDicOutsideOrg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DicLevelOfRisk.resx">
       <DependentUpon>DicLevelOfRisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DicOutsideOrg.resx">
+      <DependentUpon>DicOutsideOrg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditDicLevelOfRisk.resx">
       <DependentUpon>EditDicLevelOfRisk.cs</DependentUpon>

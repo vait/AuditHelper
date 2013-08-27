@@ -27,9 +27,8 @@ namespace AuditHelper
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DicLevelOfRisk frm = new DicLevelOfRisk();
+            DicOutsideEmp frm = new DicOutsideEmp();
             frm.Show();
-            MessageBox.Show(DB.ApplicationMap.LevelsOfRisk.GetAll()[0].Name);
             
             //MessageBox.Show(DB.ApplicationDataMappers.LevelsOfRiskDM.GetAllIDs().Count.ToString());
             //DB.ApplicationMap.LevelsOfRisk[-1] = new Classes.LevelOfRisk("qwertyu");
@@ -56,6 +55,18 @@ namespace AuditHelper
         private void уровниРискаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DicLevelOfRisk frm = new DicLevelOfRisk();
+            frm.ShowDialog();
+        }
+
+        private void организацииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DicOutsideOrg frm = new DicOutsideOrg();
+            frm.ShowDialog();
+        }
+
+        private void должностиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DicOutsideEmp frm = new DicOutsideEmp();
             frm.ShowDialog();
         }
     }
