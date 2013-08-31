@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ContentStatus.cs" />
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\LevelOfRisk.cs" />
     <Compile Include="Classes\OutsideEmp.cs" />
@@ -57,11 +58,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>auditHelperDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB\ContentStatusDM.cs" />
     <Compile Include="DB\DataMapper.cs" />
     <Compile Include="DB\IdentityMap.cs" />
     <Compile Include="DB\LevelOfRiskDM.cs" />
     <Compile Include="DB\OutsideEmpDM.cs" />
     <Compile Include="DB\OutsideOrgDM.cs" />
+    <Compile Include="Forms\EditDicContentStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditDicContentStatus.Designer.cs">
+      <DependentUpon>EditDicContentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DicContentStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DicContentStatus.Designer.cs">
+      <DependentUpon>DicContentStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DicOutsideEmp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +126,12 @@
     <Compile Include="frmTestEnvironment.Designer.cs">
       <DependentUpon>frmTestEnvironment.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\EditDicContentStatus.resx">
+      <DependentUpon>EditDicContentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DicContentStatus.resx">
+      <DependentUpon>DicContentStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DicOutsideEmp.resx">
       <DependentUpon>DicOutsideEmp.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,10 +202,6 @@
     <Content Include="DB\auditHelper.mdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Add_16.png" />
-    <Content Include="Images\Add_32.png" />
-    <Content Include="Images\Delete_16.png" />
-    <Content Include="Images\Delete_32.png" />
     <Content Include="Images\Edit_16.png" />
     <Content Include="Images\Edit_32.png" />
     <Content Include="Images\startup_icon.jpg" />

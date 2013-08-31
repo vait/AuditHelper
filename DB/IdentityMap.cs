@@ -116,5 +116,10 @@ namespace AuditHelper.DB
                 ApplicationDataMappers.OutsideEmpDM.Insert,
                 ApplicationDataMappers.OutsideEmpDM.Delete);
 
+        public static readonly EntityMap<ContentStatus> ContentStatus =
+            new EntityMap<ContentStatus>(id => ApplicationDataMappers.ContentStatusDM.GetByID(id),
+                ApplicationDataMappers.ContentStatusDM.Update,
+                ApplicationDataMappers.ContentStatusDM.Insert,
+                ApplicationDataMappers.ContentStatusDM.Delete);
     }
 }

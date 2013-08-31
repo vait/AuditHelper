@@ -69,5 +69,11 @@ namespace AuditHelper
             DicOutsideEmp frm = new DicOutsideEmp();
             frm.ShowDialog();
         }
+
+        private void статусыРекомендацийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DicContentStatus frm = new DicContentStatus();
+            frm.ShowDialog();
+        }
     }
 }

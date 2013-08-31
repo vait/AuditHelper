@@ -32,19 +32,15 @@ namespace AuditHelper.DB {
         
         private tbl_PlanDataTable tabletbl_Plan;
         
-        private tbl_Plan_ContentDataTable tabletbl_Plan_Content;
-        
         private tbl_PlanCoordinateDataTable tabletbl_PlanCoordinate;
         
         private tbl_Responsible_PersonsDataTable tabletbl_Responsible_Persons;
         
+        private tbl_Plan_ContentDataTable tabletbl_Plan_Content;
+        
+        private tbl_Content_StatusDataTable tabletbl_Content_Status;
+        
         private global::System.Data.DataRelation relationtbl_OutsideOrgtbl_OutsideEmployee;
-        
-        private global::System.Data.DataRelation relationtbl_Levels_of_Risktbl_Plan_Content;
-        
-        private global::System.Data.DataRelation relationtbl_Plan_Contenttbl_Plan_Content;
-        
-        private global::System.Data.DataRelation relationtbl_Plantbl_Plan_Content;
         
         private global::System.Data.DataRelation relationtbl_OutsideEmployeetbl_PlanCoordinate;
         
@@ -54,7 +50,15 @@ namespace AuditHelper.DB {
         
         private global::System.Data.DataRelation relationtbl_OutsideEmployeetbl_Responsible_Persons;
         
+        private global::System.Data.DataRelation relationtbl_Plan_Contenttbl_Plan_Content;
+        
         private global::System.Data.DataRelation relationtbl_Plan_Contenttbl_Responsible_Persons;
+        
+        private global::System.Data.DataRelation relationtbl_Levels_of_Risktbl_Plan_Content;
+        
+        private global::System.Data.DataRelation relationtbl_Plantbl_Plan_Content;
+        
+        private global::System.Data.DataRelation relationtbl_Content_Statustbl_Plan_Content;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -96,14 +100,17 @@ namespace AuditHelper.DB {
                 if ((ds.Tables["tbl_Plan"] != null)) {
                     base.Tables.Add(new tbl_PlanDataTable(ds.Tables["tbl_Plan"]));
                 }
-                if ((ds.Tables["tbl_Plan_Content"] != null)) {
-                    base.Tables.Add(new tbl_Plan_ContentDataTable(ds.Tables["tbl_Plan_Content"]));
-                }
                 if ((ds.Tables["tbl_PlanCoordinate"] != null)) {
                     base.Tables.Add(new tbl_PlanCoordinateDataTable(ds.Tables["tbl_PlanCoordinate"]));
                 }
                 if ((ds.Tables["tbl_Responsible_Persons"] != null)) {
                     base.Tables.Add(new tbl_Responsible_PersonsDataTable(ds.Tables["tbl_Responsible_Persons"]));
+                }
+                if ((ds.Tables["tbl_Plan_Content"] != null)) {
+                    base.Tables.Add(new tbl_Plan_ContentDataTable(ds.Tables["tbl_Plan_Content"]));
+                }
+                if ((ds.Tables["tbl_Content_Status"] != null)) {
+                    base.Tables.Add(new tbl_Content_StatusDataTable(ds.Tables["tbl_Content_Status"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -167,16 +174,6 @@ namespace AuditHelper.DB {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_Plan_ContentDataTable tbl_Plan_Content {
-            get {
-                return this.tabletbl_Plan_Content;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public tbl_PlanCoordinateDataTable tbl_PlanCoordinate {
             get {
                 return this.tabletbl_PlanCoordinate;
@@ -190,6 +187,26 @@ namespace AuditHelper.DB {
         public tbl_Responsible_PersonsDataTable tbl_Responsible_Persons {
             get {
                 return this.tabletbl_Responsible_Persons;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public tbl_Plan_ContentDataTable tbl_Plan_Content {
+            get {
+                return this.tabletbl_Plan_Content;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public tbl_Content_StatusDataTable tbl_Content_Status {
+            get {
+                return this.tabletbl_Content_Status;
             }
         }
         
@@ -272,14 +289,17 @@ namespace AuditHelper.DB {
                 if ((ds.Tables["tbl_Plan"] != null)) {
                     base.Tables.Add(new tbl_PlanDataTable(ds.Tables["tbl_Plan"]));
                 }
-                if ((ds.Tables["tbl_Plan_Content"] != null)) {
-                    base.Tables.Add(new tbl_Plan_ContentDataTable(ds.Tables["tbl_Plan_Content"]));
-                }
                 if ((ds.Tables["tbl_PlanCoordinate"] != null)) {
                     base.Tables.Add(new tbl_PlanCoordinateDataTable(ds.Tables["tbl_PlanCoordinate"]));
                 }
                 if ((ds.Tables["tbl_Responsible_Persons"] != null)) {
                     base.Tables.Add(new tbl_Responsible_PersonsDataTable(ds.Tables["tbl_Responsible_Persons"]));
+                }
+                if ((ds.Tables["tbl_Plan_Content"] != null)) {
+                    base.Tables.Add(new tbl_Plan_ContentDataTable(ds.Tables["tbl_Plan_Content"]));
+                }
+                if ((ds.Tables["tbl_Content_Status"] != null)) {
+                    base.Tables.Add(new tbl_Content_StatusDataTable(ds.Tables["tbl_Content_Status"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -338,12 +358,6 @@ namespace AuditHelper.DB {
                     this.tabletbl_Plan.InitVars();
                 }
             }
-            this.tabletbl_Plan_Content = ((tbl_Plan_ContentDataTable)(base.Tables["tbl_Plan_Content"]));
-            if ((initTable == true)) {
-                if ((this.tabletbl_Plan_Content != null)) {
-                    this.tabletbl_Plan_Content.InitVars();
-                }
-            }
             this.tabletbl_PlanCoordinate = ((tbl_PlanCoordinateDataTable)(base.Tables["tbl_PlanCoordinate"]));
             if ((initTable == true)) {
                 if ((this.tabletbl_PlanCoordinate != null)) {
@@ -356,15 +370,28 @@ namespace AuditHelper.DB {
                     this.tabletbl_Responsible_Persons.InitVars();
                 }
             }
+            this.tabletbl_Plan_Content = ((tbl_Plan_ContentDataTable)(base.Tables["tbl_Plan_Content"]));
+            if ((initTable == true)) {
+                if ((this.tabletbl_Plan_Content != null)) {
+                    this.tabletbl_Plan_Content.InitVars();
+                }
+            }
+            this.tabletbl_Content_Status = ((tbl_Content_StatusDataTable)(base.Tables["tbl_Content_Status"]));
+            if ((initTable == true)) {
+                if ((this.tabletbl_Content_Status != null)) {
+                    this.tabletbl_Content_Status.InitVars();
+                }
+            }
             this.relationtbl_OutsideOrgtbl_OutsideEmployee = this.Relations["tbl_OutsideOrgtbl_OutsideEmployee"];
-            this.relationtbl_Levels_of_Risktbl_Plan_Content = this.Relations["tbl_Levels_of_Risktbl_Plan_Content"];
-            this.relationtbl_Plan_Contenttbl_Plan_Content = this.Relations["tbl_Plan_Contenttbl_Plan_Content"];
-            this.relationtbl_Plantbl_Plan_Content = this.Relations["tbl_Plantbl_Plan_Content"];
             this.relationtbl_OutsideEmployeetbl_PlanCoordinate = this.Relations["tbl_OutsideEmployeetbl_PlanCoordinate"];
             this.relationtbl_OutsideOrgtbl_PlanCoordinate = this.Relations["tbl_OutsideOrgtbl_PlanCoordinate"];
             this.relationtbl_Plantbl_PlanCoordinate = this.Relations["tbl_Plantbl_PlanCoordinate"];
             this.relationtbl_OutsideEmployeetbl_Responsible_Persons = this.Relations["tbl_OutsideEmployeetbl_Responsible_Persons"];
+            this.relationtbl_Plan_Contenttbl_Plan_Content = this.Relations["tbl_Plan_Contenttbl_Plan_Content"];
             this.relationtbl_Plan_Contenttbl_Responsible_Persons = this.Relations["tbl_Plan_Contenttbl_Responsible_Persons"];
+            this.relationtbl_Levels_of_Risktbl_Plan_Content = this.Relations["tbl_Levels_of_Risktbl_Plan_Content"];
+            this.relationtbl_Plantbl_Plan_Content = this.Relations["tbl_Plantbl_Plan_Content"];
+            this.relationtbl_Content_Statustbl_Plan_Content = this.Relations["tbl_Content_Statustbl_Plan_Content"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -383,28 +410,18 @@ namespace AuditHelper.DB {
             base.Tables.Add(this.tabletbl_OutsideOrg);
             this.tabletbl_Plan = new tbl_PlanDataTable();
             base.Tables.Add(this.tabletbl_Plan);
-            this.tabletbl_Plan_Content = new tbl_Plan_ContentDataTable();
-            base.Tables.Add(this.tabletbl_Plan_Content);
             this.tabletbl_PlanCoordinate = new tbl_PlanCoordinateDataTable();
             base.Tables.Add(this.tabletbl_PlanCoordinate);
             this.tabletbl_Responsible_Persons = new tbl_Responsible_PersonsDataTable();
             base.Tables.Add(this.tabletbl_Responsible_Persons);
+            this.tabletbl_Plan_Content = new tbl_Plan_ContentDataTable();
+            base.Tables.Add(this.tabletbl_Plan_Content);
+            this.tabletbl_Content_Status = new tbl_Content_StatusDataTable();
+            base.Tables.Add(this.tabletbl_Content_Status);
             this.relationtbl_OutsideOrgtbl_OutsideEmployee = new global::System.Data.DataRelation("tbl_OutsideOrgtbl_OutsideEmployee", new global::System.Data.DataColumn[] {
                         this.tabletbl_OutsideOrg.org_idColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_OutsideEmployee.org_idColumn}, false);
             this.Relations.Add(this.relationtbl_OutsideOrgtbl_OutsideEmployee);
-            this.relationtbl_Levels_of_Risktbl_Plan_Content = new global::System.Data.DataRelation("tbl_Levels_of_Risktbl_Plan_Content", new global::System.Data.DataColumn[] {
-                        this.tabletbl_Levels_of_Risk.risk_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_Plan_Content.risk_idColumn}, false);
-            this.Relations.Add(this.relationtbl_Levels_of_Risktbl_Plan_Content);
-            this.relationtbl_Plan_Contenttbl_Plan_Content = new global::System.Data.DataRelation("tbl_Plan_Contenttbl_Plan_Content", new global::System.Data.DataColumn[] {
-                        this.tabletbl_Plan_Content.content_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_Plan_Content.parent_idColumn}, false);
-            this.Relations.Add(this.relationtbl_Plan_Contenttbl_Plan_Content);
-            this.relationtbl_Plantbl_Plan_Content = new global::System.Data.DataRelation("tbl_Plantbl_Plan_Content", new global::System.Data.DataColumn[] {
-                        this.tabletbl_Plan.plan_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_Plan_Content.plan_idColumn}, false);
-            this.Relations.Add(this.relationtbl_Plantbl_Plan_Content);
             this.relationtbl_OutsideEmployeetbl_PlanCoordinate = new global::System.Data.DataRelation("tbl_OutsideEmployeetbl_PlanCoordinate", new global::System.Data.DataColumn[] {
                         this.tabletbl_OutsideEmployee.employee_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_PlanCoordinate.employee_IDColumn}, false);
@@ -421,10 +438,26 @@ namespace AuditHelper.DB {
                         this.tabletbl_OutsideEmployee.employee_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_Responsible_Persons.employee_IDColumn}, false);
             this.Relations.Add(this.relationtbl_OutsideEmployeetbl_Responsible_Persons);
+            this.relationtbl_Plan_Contenttbl_Plan_Content = new global::System.Data.DataRelation("tbl_Plan_Contenttbl_Plan_Content", new global::System.Data.DataColumn[] {
+                        this.tabletbl_Plan_Content.content_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Plan_Content.parent_idColumn}, false);
+            this.Relations.Add(this.relationtbl_Plan_Contenttbl_Plan_Content);
             this.relationtbl_Plan_Contenttbl_Responsible_Persons = new global::System.Data.DataRelation("tbl_Plan_Contenttbl_Responsible_Persons", new global::System.Data.DataColumn[] {
                         this.tabletbl_Plan_Content.content_idColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_Responsible_Persons.content_idColumn}, false);
             this.Relations.Add(this.relationtbl_Plan_Contenttbl_Responsible_Persons);
+            this.relationtbl_Levels_of_Risktbl_Plan_Content = new global::System.Data.DataRelation("tbl_Levels_of_Risktbl_Plan_Content", new global::System.Data.DataColumn[] {
+                        this.tabletbl_Levels_of_Risk.risk_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Plan_Content.risk_idColumn}, false);
+            this.Relations.Add(this.relationtbl_Levels_of_Risktbl_Plan_Content);
+            this.relationtbl_Plantbl_Plan_Content = new global::System.Data.DataRelation("tbl_Plantbl_Plan_Content", new global::System.Data.DataColumn[] {
+                        this.tabletbl_Plan.plan_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Plan_Content.plan_idColumn}, false);
+            this.Relations.Add(this.relationtbl_Plantbl_Plan_Content);
+            this.relationtbl_Content_Statustbl_Plan_Content = new global::System.Data.DataRelation("tbl_Content_Statustbl_Plan_Content", new global::System.Data.DataColumn[] {
+                        this.tabletbl_Content_Status.status_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Plan_Content.status_idColumn}, false);
+            this.Relations.Add(this.relationtbl_Content_Statustbl_Plan_Content);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -453,12 +486,6 @@ namespace AuditHelper.DB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetbl_Plan_Content() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetbl_PlanCoordinate() {
             return false;
         }
@@ -466,6 +493,18 @@ namespace AuditHelper.DB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetbl_Responsible_Persons() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializetbl_Plan_Content() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializetbl_Content_Status() {
             return false;
         }
         
@@ -537,13 +576,16 @@ namespace AuditHelper.DB {
         public delegate void tbl_PlanRowChangeEventHandler(object sender, tbl_PlanRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tbl_Plan_ContentRowChangeEventHandler(object sender, tbl_Plan_ContentRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tbl_PlanCoordinateRowChangeEventHandler(object sender, tbl_PlanCoordinateRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tbl_Responsible_PersonsRowChangeEventHandler(object sender, tbl_Responsible_PersonsRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void tbl_Plan_ContentRowChangeEventHandler(object sender, tbl_Plan_ContentRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void tbl_Content_StatusRowChangeEventHandler(object sender, tbl_Content_StatusRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1731,406 +1773,6 @@ namespace AuditHelper.DB {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_Plan_ContentDataTable : global::System.Data.TypedTableBase<tbl_Plan_ContentRow> {
-            
-            private global::System.Data.DataColumn columncontent_id;
-            
-            private global::System.Data.DataColumn columnplan_id;
-            
-            private global::System.Data.DataColumn columnparent_id;
-            
-            private global::System.Data.DataColumn columnvch_number;
-            
-            private global::System.Data.DataColumn columnvch_recomendation;
-            
-            private global::System.Data.DataColumn columnvch_correct_actions;
-            
-            private global::System.Data.DataColumn columnemployee_ID;
-            
-            private global::System.Data.DataColumn columndtm_expired;
-            
-            private global::System.Data.DataColumn columnvch_comments;
-            
-            private global::System.Data.DataColumn columnrisk_id;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentDataTable() {
-                this.TableName = "tbl_Plan_Content";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tbl_Plan_ContentDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected tbl_Plan_ContentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn content_idColumn {
-                get {
-                    return this.columncontent_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn plan_idColumn {
-                get {
-                    return this.columnplan_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn parent_idColumn {
-                get {
-                    return this.columnparent_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn vch_numberColumn {
-                get {
-                    return this.columnvch_number;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn vch_recomendationColumn {
-                get {
-                    return this.columnvch_recomendation;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn vch_correct_actionsColumn {
-                get {
-                    return this.columnvch_correct_actions;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn employee_IDColumn {
-                get {
-                    return this.columnemployee_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn dtm_expiredColumn {
-                get {
-                    return this.columndtm_expired;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn vch_commentsColumn {
-                get {
-                    return this.columnvch_comments;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn risk_idColumn {
-                get {
-                    return this.columnrisk_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRow this[int index] {
-                get {
-                    return ((tbl_Plan_ContentRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addtbl_Plan_ContentRow(tbl_Plan_ContentRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRow Addtbl_Plan_ContentRow(tbl_PlanRow parenttbl_PlanRowBytbl_Plantbl_Plan_Content, tbl_Plan_ContentRow parenttbl_Plan_ContentRowBytbl_Plan_Contenttbl_Plan_Content, string vch_number, string vch_recomendation, string vch_correct_actions, int employee_ID, System.DateTime dtm_expired, string vch_comments, tbl_Levels_of_RiskRow parenttbl_Levels_of_RiskRowBytbl_Levels_of_Risktbl_Plan_Content) {
-                tbl_Plan_ContentRow rowtbl_Plan_ContentRow = ((tbl_Plan_ContentRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null,
-                        null,
-                        vch_number,
-                        vch_recomendation,
-                        vch_correct_actions,
-                        employee_ID,
-                        dtm_expired,
-                        vch_comments,
-                        null};
-                if ((parenttbl_PlanRowBytbl_Plantbl_Plan_Content != null)) {
-                    columnValuesArray[1] = parenttbl_PlanRowBytbl_Plantbl_Plan_Content[0];
-                }
-                if ((parenttbl_Plan_ContentRowBytbl_Plan_Contenttbl_Plan_Content != null)) {
-                    columnValuesArray[2] = parenttbl_Plan_ContentRowBytbl_Plan_Contenttbl_Plan_Content[0];
-                }
-                if ((parenttbl_Levels_of_RiskRowBytbl_Levels_of_Risktbl_Plan_Content != null)) {
-                    columnValuesArray[9] = parenttbl_Levels_of_RiskRowBytbl_Levels_of_Risktbl_Plan_Content[0];
-                }
-                rowtbl_Plan_ContentRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_Plan_ContentRow);
-                return rowtbl_Plan_ContentRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRow FindBycontent_id(int content_id) {
-                return ((tbl_Plan_ContentRow)(this.Rows.Find(new object[] {
-                            content_id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                tbl_Plan_ContentDataTable cln = ((tbl_Plan_ContentDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_Plan_ContentDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columncontent_id = base.Columns["content_id"];
-                this.columnplan_id = base.Columns["plan_id"];
-                this.columnparent_id = base.Columns["parent_id"];
-                this.columnvch_number = base.Columns["vch_number"];
-                this.columnvch_recomendation = base.Columns["vch_recomendation"];
-                this.columnvch_correct_actions = base.Columns["vch_correct_actions"];
-                this.columnemployee_ID = base.Columns["employee_ID"];
-                this.columndtm_expired = base.Columns["dtm_expired"];
-                this.columnvch_comments = base.Columns["vch_comments"];
-                this.columnrisk_id = base.Columns["risk_id"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columncontent_id = new global::System.Data.DataColumn("content_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontent_id);
-                this.columnplan_id = new global::System.Data.DataColumn("plan_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnplan_id);
-                this.columnparent_id = new global::System.Data.DataColumn("parent_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnparent_id);
-                this.columnvch_number = new global::System.Data.DataColumn("vch_number", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvch_number);
-                this.columnvch_recomendation = new global::System.Data.DataColumn("vch_recomendation", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvch_recomendation);
-                this.columnvch_correct_actions = new global::System.Data.DataColumn("vch_correct_actions", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvch_correct_actions);
-                this.columnemployee_ID = new global::System.Data.DataColumn("employee_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemployee_ID);
-                this.columndtm_expired = new global::System.Data.DataColumn("dtm_expired", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndtm_expired);
-                this.columnvch_comments = new global::System.Data.DataColumn("vch_comments", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvch_comments);
-                this.columnrisk_id = new global::System.Data.DataColumn("risk_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrisk_id);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncontent_id}, true));
-                this.columncontent_id.AutoIncrement = true;
-                this.columncontent_id.AutoIncrementSeed = -1;
-                this.columncontent_id.AutoIncrementStep = -1;
-                this.columncontent_id.AllowDBNull = false;
-                this.columncontent_id.Unique = true;
-                this.columnvch_number.MaxLength = 255;
-                this.columnvch_recomendation.MaxLength = 536870910;
-                this.columnvch_correct_actions.MaxLength = 536870910;
-                this.columnvch_comments.MaxLength = 536870910;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRow Newtbl_Plan_ContentRow() {
-                return ((tbl_Plan_ContentRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_Plan_ContentRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(tbl_Plan_ContentRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.tbl_Plan_ContentRowChanged != null)) {
-                    this.tbl_Plan_ContentRowChanged(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.tbl_Plan_ContentRowChanging != null)) {
-                    this.tbl_Plan_ContentRowChanging(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.tbl_Plan_ContentRowDeleted != null)) {
-                    this.tbl_Plan_ContentRowDeleted(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.tbl_Plan_ContentRowDeleting != null)) {
-                    this.tbl_Plan_ContentRowDeleting(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removetbl_Plan_ContentRow(tbl_Plan_ContentRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                auditHelperDataSet ds = new auditHelperDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_Plan_ContentDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tbl_PlanCoordinateDataTable : global::System.Data.TypedTableBase<tbl_PlanCoordinateRow> {
             
             private global::System.Data.DataColumn columnemployee_ID;
@@ -2707,6 +2349,699 @@ namespace AuditHelper.DB {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class tbl_Plan_ContentDataTable : global::System.Data.TypedTableBase<tbl_Plan_ContentRow> {
+            
+            private global::System.Data.DataColumn columncontent_id;
+            
+            private global::System.Data.DataColumn columnplan_id;
+            
+            private global::System.Data.DataColumn columnparent_id;
+            
+            private global::System.Data.DataColumn columnvch_number;
+            
+            private global::System.Data.DataColumn columnvch_recomendation;
+            
+            private global::System.Data.DataColumn columnvch_correct_actions;
+            
+            private global::System.Data.DataColumn columnemployee_ID;
+            
+            private global::System.Data.DataColumn columndtm_expired;
+            
+            private global::System.Data.DataColumn columnvch_comments;
+            
+            private global::System.Data.DataColumn columnrisk_id;
+            
+            private global::System.Data.DataColumn columnstatus_id;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentDataTable() {
+                this.TableName = "tbl_Plan_Content";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_Plan_ContentDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected tbl_Plan_ContentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn content_idColumn {
+                get {
+                    return this.columncontent_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn plan_idColumn {
+                get {
+                    return this.columnplan_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn parent_idColumn {
+                get {
+                    return this.columnparent_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn vch_numberColumn {
+                get {
+                    return this.columnvch_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn vch_recomendationColumn {
+                get {
+                    return this.columnvch_recomendation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn vch_correct_actionsColumn {
+                get {
+                    return this.columnvch_correct_actions;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn employee_IDColumn {
+                get {
+                    return this.columnemployee_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dtm_expiredColumn {
+                get {
+                    return this.columndtm_expired;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn vch_commentsColumn {
+                get {
+                    return this.columnvch_comments;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn risk_idColumn {
+                get {
+                    return this.columnrisk_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn status_idColumn {
+                get {
+                    return this.columnstatus_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRow this[int index] {
+                get {
+                    return ((tbl_Plan_ContentRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Plan_ContentRowChangeEventHandler tbl_Plan_ContentRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addtbl_Plan_ContentRow(tbl_Plan_ContentRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRow Addtbl_Plan_ContentRow(tbl_PlanRow parenttbl_PlanRowBytbl_Plantbl_Plan_Content, tbl_Plan_ContentRow parenttbl_Plan_ContentRowBytbl_Plan_Contenttbl_Plan_Content, string vch_number, string vch_recomendation, string vch_correct_actions, int employee_ID, System.DateTime dtm_expired, string vch_comments, tbl_Levels_of_RiskRow parenttbl_Levels_of_RiskRowBytbl_Levels_of_Risktbl_Plan_Content, tbl_Content_StatusRow parenttbl_Content_StatusRowBytbl_Content_Statustbl_Plan_Content) {
+                tbl_Plan_ContentRow rowtbl_Plan_ContentRow = ((tbl_Plan_ContentRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        vch_number,
+                        vch_recomendation,
+                        vch_correct_actions,
+                        employee_ID,
+                        dtm_expired,
+                        vch_comments,
+                        null,
+                        null};
+                if ((parenttbl_PlanRowBytbl_Plantbl_Plan_Content != null)) {
+                    columnValuesArray[1] = parenttbl_PlanRowBytbl_Plantbl_Plan_Content[0];
+                }
+                if ((parenttbl_Plan_ContentRowBytbl_Plan_Contenttbl_Plan_Content != null)) {
+                    columnValuesArray[2] = parenttbl_Plan_ContentRowBytbl_Plan_Contenttbl_Plan_Content[0];
+                }
+                if ((parenttbl_Levels_of_RiskRowBytbl_Levels_of_Risktbl_Plan_Content != null)) {
+                    columnValuesArray[9] = parenttbl_Levels_of_RiskRowBytbl_Levels_of_Risktbl_Plan_Content[0];
+                }
+                if ((parenttbl_Content_StatusRowBytbl_Content_Statustbl_Plan_Content != null)) {
+                    columnValuesArray[10] = parenttbl_Content_StatusRowBytbl_Content_Statustbl_Plan_Content[0];
+                }
+                rowtbl_Plan_ContentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_Plan_ContentRow);
+                return rowtbl_Plan_ContentRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRow FindBycontent_id(int content_id) {
+                return ((tbl_Plan_ContentRow)(this.Rows.Find(new object[] {
+                            content_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                tbl_Plan_ContentDataTable cln = ((tbl_Plan_ContentDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new tbl_Plan_ContentDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columncontent_id = base.Columns["content_id"];
+                this.columnplan_id = base.Columns["plan_id"];
+                this.columnparent_id = base.Columns["parent_id"];
+                this.columnvch_number = base.Columns["vch_number"];
+                this.columnvch_recomendation = base.Columns["vch_recomendation"];
+                this.columnvch_correct_actions = base.Columns["vch_correct_actions"];
+                this.columnemployee_ID = base.Columns["employee_ID"];
+                this.columndtm_expired = base.Columns["dtm_expired"];
+                this.columnvch_comments = base.Columns["vch_comments"];
+                this.columnrisk_id = base.Columns["risk_id"];
+                this.columnstatus_id = base.Columns["status_id"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columncontent_id = new global::System.Data.DataColumn("content_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontent_id);
+                this.columnplan_id = new global::System.Data.DataColumn("plan_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnplan_id);
+                this.columnparent_id = new global::System.Data.DataColumn("parent_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnparent_id);
+                this.columnvch_number = new global::System.Data.DataColumn("vch_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvch_number);
+                this.columnvch_recomendation = new global::System.Data.DataColumn("vch_recomendation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvch_recomendation);
+                this.columnvch_correct_actions = new global::System.Data.DataColumn("vch_correct_actions", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvch_correct_actions);
+                this.columnemployee_ID = new global::System.Data.DataColumn("employee_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemployee_ID);
+                this.columndtm_expired = new global::System.Data.DataColumn("dtm_expired", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndtm_expired);
+                this.columnvch_comments = new global::System.Data.DataColumn("vch_comments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvch_comments);
+                this.columnrisk_id = new global::System.Data.DataColumn("risk_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrisk_id);
+                this.columnstatus_id = new global::System.Data.DataColumn("status_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus_id);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncontent_id}, true));
+                this.columncontent_id.AutoIncrement = true;
+                this.columncontent_id.AutoIncrementSeed = -1;
+                this.columncontent_id.AutoIncrementStep = -1;
+                this.columncontent_id.AllowDBNull = false;
+                this.columncontent_id.Unique = true;
+                this.columnvch_number.MaxLength = 255;
+                this.columnvch_recomendation.MaxLength = 536870910;
+                this.columnvch_correct_actions.MaxLength = 536870910;
+                this.columnvch_comments.MaxLength = 536870910;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRow Newtbl_Plan_ContentRow() {
+                return ((tbl_Plan_ContentRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new tbl_Plan_ContentRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(tbl_Plan_ContentRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.tbl_Plan_ContentRowChanged != null)) {
+                    this.tbl_Plan_ContentRowChanged(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.tbl_Plan_ContentRowChanging != null)) {
+                    this.tbl_Plan_ContentRowChanging(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.tbl_Plan_ContentRowDeleted != null)) {
+                    this.tbl_Plan_ContentRowDeleted(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.tbl_Plan_ContentRowDeleting != null)) {
+                    this.tbl_Plan_ContentRowDeleting(this, new tbl_Plan_ContentRowChangeEvent(((tbl_Plan_ContentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removetbl_Plan_ContentRow(tbl_Plan_ContentRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                auditHelperDataSet ds = new auditHelperDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "tbl_Plan_ContentDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class tbl_Content_StatusDataTable : global::System.Data.TypedTableBase<tbl_Content_StatusRow> {
+            
+            private global::System.Data.DataColumn columnstatus_id;
+            
+            private global::System.Data.DataColumn columnvch_name;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusDataTable() {
+                this.TableName = "tbl_Content_Status";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_Content_StatusDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected tbl_Content_StatusDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn status_idColumn {
+                get {
+                    return this.columnstatus_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn vch_nameColumn {
+                get {
+                    return this.columnvch_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRow this[int index] {
+                get {
+                    return ((tbl_Content_StatusRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Content_StatusRowChangeEventHandler tbl_Content_StatusRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Content_StatusRowChangeEventHandler tbl_Content_StatusRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Content_StatusRowChangeEventHandler tbl_Content_StatusRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_Content_StatusRowChangeEventHandler tbl_Content_StatusRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addtbl_Content_StatusRow(tbl_Content_StatusRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRow Addtbl_Content_StatusRow(string vch_name) {
+                tbl_Content_StatusRow rowtbl_Content_StatusRow = ((tbl_Content_StatusRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        vch_name};
+                rowtbl_Content_StatusRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_Content_StatusRow);
+                return rowtbl_Content_StatusRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRow FindBystatus_id(int status_id) {
+                return ((tbl_Content_StatusRow)(this.Rows.Find(new object[] {
+                            status_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                tbl_Content_StatusDataTable cln = ((tbl_Content_StatusDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new tbl_Content_StatusDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnstatus_id = base.Columns["status_id"];
+                this.columnvch_name = base.Columns["vch_name"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnstatus_id = new global::System.Data.DataColumn("status_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus_id);
+                this.columnvch_name = new global::System.Data.DataColumn("vch_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvch_name);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnstatus_id}, true));
+                this.columnstatus_id.AutoIncrement = true;
+                this.columnstatus_id.AutoIncrementSeed = -1;
+                this.columnstatus_id.AutoIncrementStep = -1;
+                this.columnstatus_id.AllowDBNull = false;
+                this.columnstatus_id.Unique = true;
+                this.columnvch_name.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRow Newtbl_Content_StatusRow() {
+                return ((tbl_Content_StatusRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new tbl_Content_StatusRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(tbl_Content_StatusRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.tbl_Content_StatusRowChanged != null)) {
+                    this.tbl_Content_StatusRowChanged(this, new tbl_Content_StatusRowChangeEvent(((tbl_Content_StatusRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.tbl_Content_StatusRowChanging != null)) {
+                    this.tbl_Content_StatusRowChanging(this, new tbl_Content_StatusRowChangeEvent(((tbl_Content_StatusRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.tbl_Content_StatusRowDeleted != null)) {
+                    this.tbl_Content_StatusRowDeleted(this, new tbl_Content_StatusRowChangeEvent(((tbl_Content_StatusRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.tbl_Content_StatusRowDeleting != null)) {
+                    this.tbl_Content_StatusRowDeleting(this, new tbl_Content_StatusRowChangeEvent(((tbl_Content_StatusRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removetbl_Content_StatusRow(tbl_Content_StatusRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                auditHelperDataSet ds = new auditHelperDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "tbl_Content_StatusDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tbl_Levels_of_RiskRow : global::System.Data.DataRow {
@@ -3129,6 +3464,17 @@ namespace AuditHelper.DB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_PlanCoordinateRow[] Gettbl_PlanCoordinateRows() {
+                if ((this.Table.ChildRelations["tbl_Plantbl_PlanCoordinate"] == null)) {
+                    return new tbl_PlanCoordinateRow[0];
+                }
+                else {
+                    return ((tbl_PlanCoordinateRow[])(base.GetChildRows(this.Table.ChildRelations["tbl_Plantbl_PlanCoordinate"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_Plan_ContentRow[] Gettbl_Plan_ContentRows() {
                 if ((this.Table.ChildRelations["tbl_Plantbl_Plan_Content"] == null)) {
                     return new tbl_Plan_ContentRow[0];
@@ -3137,15 +3483,144 @@ namespace AuditHelper.DB {
                     return ((tbl_Plan_ContentRow[])(base.GetChildRows(this.Table.ChildRelations["tbl_Plantbl_Plan_Content"])));
                 }
             }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_PlanCoordinateRow : global::System.Data.DataRow {
+            
+            private tbl_PlanCoordinateDataTable tabletbl_PlanCoordinate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_PlanCoordinateRow[] Gettbl_PlanCoordinateRows() {
-                if ((this.Table.ChildRelations["tbl_Plantbl_PlanCoordinate"] == null)) {
-                    return new tbl_PlanCoordinateRow[0];
+            internal tbl_PlanCoordinateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_PlanCoordinate = ((tbl_PlanCoordinateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int employee_ID {
+                get {
+                    return ((int)(this[this.tabletbl_PlanCoordinate.employee_IDColumn]));
                 }
-                else {
-                    return ((tbl_PlanCoordinateRow[])(base.GetChildRows(this.Table.ChildRelations["tbl_Plantbl_PlanCoordinate"])));
+                set {
+                    this[this.tabletbl_PlanCoordinate.employee_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int plan_id {
+                get {
+                    return ((int)(this[this.tabletbl_PlanCoordinate.plan_idColumn]));
+                }
+                set {
+                    this[this.tabletbl_PlanCoordinate.plan_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int org_id {
+                get {
+                    return ((int)(this[this.tabletbl_PlanCoordinate.org_idColumn]));
+                }
+                set {
+                    this[this.tabletbl_PlanCoordinate.org_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_OutsideEmployeeRow tbl_OutsideEmployeeRow {
+                get {
+                    return ((tbl_OutsideEmployeeRow)(this.GetParentRow(this.Table.ParentRelations["tbl_OutsideEmployeetbl_PlanCoordinate"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_OutsideEmployeetbl_PlanCoordinate"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_OutsideOrgRow tbl_OutsideOrgRow {
+                get {
+                    return ((tbl_OutsideOrgRow)(this.GetParentRow(this.Table.ParentRelations["tbl_OutsideOrgtbl_PlanCoordinate"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_OutsideOrgtbl_PlanCoordinate"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_PlanRow tbl_PlanRow {
+                get {
+                    return ((tbl_PlanRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Plantbl_PlanCoordinate"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Plantbl_PlanCoordinate"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_Responsible_PersonsRow : global::System.Data.DataRow {
+            
+            private tbl_Responsible_PersonsDataTable tabletbl_Responsible_Persons;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_Responsible_PersonsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_Responsible_Persons = ((tbl_Responsible_PersonsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int employee_ID {
+                get {
+                    return ((int)(this[this.tabletbl_Responsible_Persons.employee_IDColumn]));
+                }
+                set {
+                    this[this.tabletbl_Responsible_Persons.employee_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int content_id {
+                get {
+                    return ((int)(this[this.tabletbl_Responsible_Persons.content_idColumn]));
+                }
+                set {
+                    this[this.tabletbl_Responsible_Persons.content_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_OutsideEmployeeRow tbl_OutsideEmployeeRow {
+                get {
+                    return ((tbl_OutsideEmployeeRow)(this.GetParentRow(this.Table.ParentRelations["tbl_OutsideEmployeetbl_Responsible_Persons"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_OutsideEmployeetbl_Responsible_Persons"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRow tbl_Plan_ContentRow {
+                get {
+                    return ((tbl_Plan_ContentRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Plan_Contenttbl_Responsible_Persons"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Plan_Contenttbl_Responsible_Persons"]);
                 }
             }
         }
@@ -3322,12 +3797,17 @@ namespace AuditHelper.DB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Levels_of_RiskRow tbl_Levels_of_RiskRow {
+            public int status_id {
                 get {
-                    return ((tbl_Levels_of_RiskRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Levels_of_Risktbl_Plan_Content"])));
+                    try {
+                        return ((int)(this[this.tabletbl_Plan_Content.status_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status_id\' in table \'tbl_Plan_Content\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Levels_of_Risktbl_Plan_Content"]);
+                    this[this.tabletbl_Plan_Content.status_idColumn] = value;
                 }
             }
             
@@ -3344,12 +3824,34 @@ namespace AuditHelper.DB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Levels_of_RiskRow tbl_Levels_of_RiskRow {
+                get {
+                    return ((tbl_Levels_of_RiskRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Levels_of_Risktbl_Plan_Content"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Levels_of_Risktbl_Plan_Content"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_PlanRow tbl_PlanRow {
                 get {
                     return ((tbl_PlanRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Plantbl_Plan_Content"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["tbl_Plantbl_Plan_Content"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRow tbl_Content_StatusRow {
+                get {
+                    return ((tbl_Content_StatusRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Content_Statustbl_Plan_Content"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Content_Statustbl_Plan_Content"]);
                 }
             }
             
@@ -3463,6 +3965,18 @@ namespace AuditHelper.DB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstatus_idNull() {
+                return this.IsNull(this.tabletbl_Plan_Content.status_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstatus_idNull() {
+                this[this.tabletbl_Plan_Content.status_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_Plan_ContentRow[] Gettbl_Plan_ContentRows() {
                 if ((this.Table.ChildRelations["tbl_Plan_Contenttbl_Plan_Content"] == null)) {
                     return new tbl_Plan_ContentRow[0];
@@ -3487,139 +4001,64 @@ namespace AuditHelper.DB {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tbl_PlanCoordinateRow : global::System.Data.DataRow {
+        public partial class tbl_Content_StatusRow : global::System.Data.DataRow {
             
-            private tbl_PlanCoordinateDataTable tabletbl_PlanCoordinate;
+            private tbl_Content_StatusDataTable tabletbl_Content_Status;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tbl_PlanCoordinateRow(global::System.Data.DataRowBuilder rb) : 
+            internal tbl_Content_StatusRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletbl_PlanCoordinate = ((tbl_PlanCoordinateDataTable)(this.Table));
+                this.tabletbl_Content_Status = ((tbl_Content_StatusDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int employee_ID {
+            public int status_id {
                 get {
-                    return ((int)(this[this.tabletbl_PlanCoordinate.employee_IDColumn]));
+                    return ((int)(this[this.tabletbl_Content_Status.status_idColumn]));
                 }
                 set {
-                    this[this.tabletbl_PlanCoordinate.employee_IDColumn] = value;
+                    this[this.tabletbl_Content_Status.status_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int plan_id {
+            public string vch_name {
                 get {
-                    return ((int)(this[this.tabletbl_PlanCoordinate.plan_idColumn]));
+                    try {
+                        return ((string)(this[this.tabletbl_Content_Status.vch_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'vch_name\' in table \'tbl_Content_Status\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tabletbl_PlanCoordinate.plan_idColumn] = value;
+                    this[this.tabletbl_Content_Status.vch_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int org_id {
-                get {
-                    return ((int)(this[this.tabletbl_PlanCoordinate.org_idColumn]));
-                }
-                set {
-                    this[this.tabletbl_PlanCoordinate.org_idColumn] = value;
-                }
+            public bool Isvch_nameNull() {
+                return this.IsNull(this.tabletbl_Content_Status.vch_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_OutsideEmployeeRow tbl_OutsideEmployeeRow {
-                get {
-                    return ((tbl_OutsideEmployeeRow)(this.GetParentRow(this.Table.ParentRelations["tbl_OutsideEmployeetbl_PlanCoordinate"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_OutsideEmployeetbl_PlanCoordinate"]);
-                }
+            public void Setvch_nameNull() {
+                this[this.tabletbl_Content_Status.vch_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_OutsideOrgRow tbl_OutsideOrgRow {
-                get {
-                    return ((tbl_OutsideOrgRow)(this.GetParentRow(this.Table.ParentRelations["tbl_OutsideOrgtbl_PlanCoordinate"])));
+            public tbl_Plan_ContentRow[] Gettbl_Plan_ContentRows() {
+                if ((this.Table.ChildRelations["tbl_Content_Statustbl_Plan_Content"] == null)) {
+                    return new tbl_Plan_ContentRow[0];
                 }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_OutsideOrgtbl_PlanCoordinate"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_PlanRow tbl_PlanRow {
-                get {
-                    return ((tbl_PlanRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Plantbl_PlanCoordinate"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Plantbl_PlanCoordinate"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class tbl_Responsible_PersonsRow : global::System.Data.DataRow {
-            
-            private tbl_Responsible_PersonsDataTable tabletbl_Responsible_Persons;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tbl_Responsible_PersonsRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabletbl_Responsible_Persons = ((tbl_Responsible_PersonsDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int employee_ID {
-                get {
-                    return ((int)(this[this.tabletbl_Responsible_Persons.employee_IDColumn]));
-                }
-                set {
-                    this[this.tabletbl_Responsible_Persons.employee_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int content_id {
-                get {
-                    return ((int)(this[this.tabletbl_Responsible_Persons.content_idColumn]));
-                }
-                set {
-                    this[this.tabletbl_Responsible_Persons.content_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_OutsideEmployeeRow tbl_OutsideEmployeeRow {
-                get {
-                    return ((tbl_OutsideEmployeeRow)(this.GetParentRow(this.Table.ParentRelations["tbl_OutsideEmployeetbl_Responsible_Persons"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_OutsideEmployeetbl_Responsible_Persons"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRow tbl_Plan_ContentRow {
-                get {
-                    return ((tbl_Plan_ContentRow)(this.GetParentRow(this.Table.ParentRelations["tbl_Plan_Contenttbl_Responsible_Persons"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_Plan_Contenttbl_Responsible_Persons"]);
+                else {
+                    return ((tbl_Plan_ContentRow[])(base.GetChildRows(this.Table.ChildRelations["tbl_Content_Statustbl_Plan_Content"])));
                 }
             }
         }
@@ -3764,40 +4203,6 @@ namespace AuditHelper.DB {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tbl_Plan_ContentRowChangeEvent : global::System.EventArgs {
-            
-            private tbl_Plan_ContentRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRowChangeEvent(tbl_Plan_ContentRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_Plan_ContentRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class tbl_PlanCoordinateRowChangeEvent : global::System.EventArgs {
             
             private tbl_PlanCoordinateRow eventRow;
@@ -3848,6 +4253,74 @@ namespace AuditHelper.DB {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_Responsible_PersonsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class tbl_Plan_ContentRowChangeEvent : global::System.EventArgs {
+            
+            private tbl_Plan_ContentRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRowChangeEvent(tbl_Plan_ContentRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Plan_ContentRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class tbl_Content_StatusRowChangeEvent : global::System.EventArgs {
+            
+            private tbl_Content_StatusRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRowChangeEvent(tbl_Content_StatusRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_Content_StatusRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5302,465 +5775,6 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_Plan_ContentTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
-        
-        private global::System.Data.OleDb.OleDbConnection _connection;
-        
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
-        
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public tbl_Plan_ContentTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_Plan_Content";
-            tableMapping.ColumnMappings.Add("content_id", "content_id");
-            tableMapping.ColumnMappings.Add("plan_id", "plan_id");
-            tableMapping.ColumnMappings.Add("parent_id", "parent_id");
-            tableMapping.ColumnMappings.Add("vch_number", "vch_number");
-            tableMapping.ColumnMappings.Add("vch_recomendation", "vch_recomendation");
-            tableMapping.ColumnMappings.Add("vch_correct_actions", "vch_correct_actions");
-            tableMapping.ColumnMappings.Add("employee_ID", "employee_ID");
-            tableMapping.ColumnMappings.Add("dtm_expired", "dtm_expired");
-            tableMapping.ColumnMappings.Add("vch_comments", "vch_comments");
-            tableMapping.ColumnMappings.Add("risk_id", "risk_id");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tbl_Plan_Content` WHERE ((`content_id` = ?) AND ((? = 1 AND `plan_id` IS NULL) OR (`plan_id` = ?)) AND ((? = 1 AND `parent_id` IS NULL) OR (`parent_id` = ?)) AND ((? = 1 AND `vch_number` IS NULL) OR (`vch_number` = ?)) AND ((? = 1 AND `employee_ID` IS NULL) OR (`employee_ID` = ?)) AND ((? = 1 AND `dtm_expired` IS NULL) OR (`dtm_expired` = ?)) AND ((? = 1 AND `risk_id` IS NULL) OR (`risk_id` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_content_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "content_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_vch_number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dtm_expired", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_Plan_Content` (`plan_id`, `parent_id`, `vch_number`, `vch_recome" +
-                "ndation`, `vch_correct_actions`, `employee_ID`, `dtm_expired`, `vch_comments`, `" +
-                "risk_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_recomendation", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_recomendation", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_correct_actions", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_correct_actions", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_comments", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_comments", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tbl_Plan_Content` SET `plan_id` = ?, `parent_id` = ?, `vch_number` = ?, `vch_recomendation` = ?, `vch_correct_actions` = ?, `employee_ID` = ?, `dtm_expired` = ?, `vch_comments` = ?, `risk_id` = ? WHERE ((`content_id` = ?) AND ((? = 1 AND `plan_id` IS NULL) OR (`plan_id` = ?)) AND ((? = 1 AND `parent_id` IS NULL) OR (`parent_id` = ?)) AND ((? = 1 AND `vch_number` IS NULL) OR (`vch_number` = ?)) AND ((? = 1 AND `employee_ID` IS NULL) OR (`employee_ID` = ?)) AND ((? = 1 AND `dtm_expired` IS NULL) OR (`dtm_expired` = ?)) AND ((? = 1 AND `risk_id` IS NULL) OR (`risk_id` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_recomendation", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_recomendation", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_correct_actions", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_correct_actions", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_comments", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_comments", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_content_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "content_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_vch_number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dtm_expired", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, false, null));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::AuditHelper.Properties.Settings.Default.auditHelperConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT content_id, plan_id, parent_id, vch_number, vch_recomendation, vch_correct" +
-                "_actions, employee_ID, dtm_expired, vch_comments, risk_id FROM tbl_Plan_Content";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(auditHelperDataSet.tbl_Plan_ContentDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual auditHelperDataSet.tbl_Plan_ContentDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            auditHelperDataSet.tbl_Plan_ContentDataTable dataTable = new auditHelperDataSet.tbl_Plan_ContentDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(auditHelperDataSet.tbl_Plan_ContentDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(auditHelperDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_Plan_Content");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_content_id, int Original_plan_id, global::System.Nullable<int> Original_parent_id, string Original_vch_number, int Original_employee_ID, System.DateTime Original_dtm_expired, int Original_risk_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_content_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_plan_id));
-            if ((Original_parent_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_parent_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_vch_number == null)) {
-                throw new global::System.ArgumentNullException("Original_vch_number");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_vch_number));
-            }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_employee_ID));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_dtm_expired));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_risk_id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int plan_id, global::System.Nullable<int> parent_id, string vch_number, string vch_recomendation, string vch_correct_actions, int employee_ID, System.DateTime dtm_expired, string vch_comments, int risk_id) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(plan_id));
-            if ((parent_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(parent_id.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((vch_number == null)) {
-                throw new global::System.ArgumentNullException("vch_number");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(vch_number));
-            }
-            if ((vch_recomendation == null)) {
-                throw new global::System.ArgumentNullException("vch_recomendation");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(vch_recomendation));
-            }
-            if ((vch_correct_actions == null)) {
-                throw new global::System.ArgumentNullException("vch_correct_actions");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(vch_correct_actions));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(employee_ID));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(dtm_expired));
-            if ((vch_comments == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(vch_comments));
-            }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(risk_id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int plan_id, 
-                    global::System.Nullable<int> parent_id, 
-                    string vch_number, 
-                    string vch_recomendation, 
-                    string vch_correct_actions, 
-                    int employee_ID, 
-                    System.DateTime dtm_expired, 
-                    string vch_comments, 
-                    int risk_id, 
-                    int Original_content_id, 
-                    int Original_plan_id, 
-                    global::System.Nullable<int> Original_parent_id, 
-                    string Original_vch_number, 
-                    int Original_employee_ID, 
-                    System.DateTime Original_dtm_expired, 
-                    int Original_risk_id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(plan_id));
-            if ((parent_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(parent_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((vch_number == null)) {
-                throw new global::System.ArgumentNullException("vch_number");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(vch_number));
-            }
-            if ((vch_recomendation == null)) {
-                throw new global::System.ArgumentNullException("vch_recomendation");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(vch_recomendation));
-            }
-            if ((vch_correct_actions == null)) {
-                throw new global::System.ArgumentNullException("vch_correct_actions");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(vch_correct_actions));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(employee_ID));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(dtm_expired));
-            if ((vch_comments == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(vch_comments));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(risk_id));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_content_id));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_plan_id));
-            if ((Original_parent_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_parent_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_vch_number == null)) {
-                throw new global::System.ArgumentNullException("Original_vch_number");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_vch_number));
-            }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_employee_ID));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_dtm_expired));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_risk_id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class tbl_PlanCoordinateTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
@@ -6360,6 +6374,859 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tbl_Plan_ContentTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public tbl_Plan_ContentTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tbl_Plan_Content";
+            tableMapping.ColumnMappings.Add("content_id", "content_id");
+            tableMapping.ColumnMappings.Add("plan_id", "plan_id");
+            tableMapping.ColumnMappings.Add("parent_id", "parent_id");
+            tableMapping.ColumnMappings.Add("vch_number", "vch_number");
+            tableMapping.ColumnMappings.Add("vch_recomendation", "vch_recomendation");
+            tableMapping.ColumnMappings.Add("vch_correct_actions", "vch_correct_actions");
+            tableMapping.ColumnMappings.Add("employee_ID", "employee_ID");
+            tableMapping.ColumnMappings.Add("dtm_expired", "dtm_expired");
+            tableMapping.ColumnMappings.Add("vch_comments", "vch_comments");
+            tableMapping.ColumnMappings.Add("risk_id", "risk_id");
+            tableMapping.ColumnMappings.Add("status_id", "status_id");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tbl_Plan_Content` WHERE ((`content_id` = ?) AND ((? = 1 AND `plan_id` IS NULL) OR (`plan_id` = ?)) AND ((? = 1 AND `parent_id` IS NULL) OR (`parent_id` = ?)) AND ((? = 1 AND `vch_number` IS NULL) OR (`vch_number` = ?)) AND ((? = 1 AND `employee_ID` IS NULL) OR (`employee_ID` = ?)) AND ((? = 1 AND `dtm_expired` IS NULL) OR (`dtm_expired` = ?)) AND ((? = 1 AND `risk_id` IS NULL) OR (`risk_id` = ?)) AND ((? = 1 AND `status_id` IS NULL) OR (`status_id` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_content_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "content_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_vch_number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dtm_expired", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_Plan_Content` (`plan_id`, `parent_id`, `vch_number`, `vch_recome" +
+                "ndation`, `vch_correct_actions`, `employee_ID`, `dtm_expired`, `vch_comments`, `" +
+                "risk_id`, `status_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_recomendation", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_recomendation", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_correct_actions", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_correct_actions", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_comments", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_comments", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tbl_Plan_Content` SET `plan_id` = ?, `parent_id` = ?, `vch_number` = ?, `vch_recomendation` = ?, `vch_correct_actions` = ?, `employee_ID` = ?, `dtm_expired` = ?, `vch_comments` = ?, `risk_id` = ?, `status_id` = ? WHERE ((`content_id` = ?) AND ((? = 1 AND `plan_id` IS NULL) OR (`plan_id` = ?)) AND ((? = 1 AND `parent_id` IS NULL) OR (`parent_id` = ?)) AND ((? = 1 AND `vch_number` IS NULL) OR (`vch_number` = ?)) AND ((? = 1 AND `employee_ID` IS NULL) OR (`employee_ID` = ?)) AND ((? = 1 AND `dtm_expired` IS NULL) OR (`dtm_expired` = ?)) AND ((? = 1 AND `risk_id` IS NULL) OR (`risk_id` = ?)) AND ((? = 1 AND `status_id` IS NULL) OR (`status_id` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_recomendation", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_recomendation", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_correct_actions", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_correct_actions", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_comments", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_comments", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_content_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "content_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_plan_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "plan_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_parent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "parent_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_vch_number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_vch_number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_number", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_employee_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "employee_ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dtm_expired", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dtm_expired", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtm_expired", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_risk_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "risk_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Original, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::AuditHelper.Properties.Settings.Default.auditHelperConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT content_id, plan_id, parent_id, vch_number, vch_recomendation, vch_correct" +
+                "_actions, employee_ID, dtm_expired, vch_comments, risk_id, status_id FROM tbl_Pl" +
+                "an_Content";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(auditHelperDataSet.tbl_Plan_ContentDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual auditHelperDataSet.tbl_Plan_ContentDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            auditHelperDataSet.tbl_Plan_ContentDataTable dataTable = new auditHelperDataSet.tbl_Plan_ContentDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(auditHelperDataSet.tbl_Plan_ContentDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(auditHelperDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_Plan_Content");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_content_id, int Original_plan_id, global::System.Nullable<int> Original_parent_id, string Original_vch_number, int Original_employee_ID, System.DateTime Original_dtm_expired, int Original_risk_id, global::System.Nullable<int> Original_status_id) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_content_id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_plan_id));
+            if ((Original_parent_id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_parent_id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_vch_number == null)) {
+                throw new global::System.ArgumentNullException("Original_vch_number");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_vch_number));
+            }
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_employee_ID));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_dtm_expired));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_risk_id));
+            if ((Original_status_id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_status_id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int plan_id, global::System.Nullable<int> parent_id, string vch_number, string vch_recomendation, string vch_correct_actions, int employee_ID, System.DateTime dtm_expired, string vch_comments, int risk_id, global::System.Nullable<int> status_id) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(plan_id));
+            if ((parent_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(parent_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((vch_number == null)) {
+                throw new global::System.ArgumentNullException("vch_number");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(vch_number));
+            }
+            if ((vch_recomendation == null)) {
+                throw new global::System.ArgumentNullException("vch_recomendation");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(vch_recomendation));
+            }
+            if ((vch_correct_actions == null)) {
+                throw new global::System.ArgumentNullException("vch_correct_actions");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(vch_correct_actions));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(employee_ID));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(dtm_expired));
+            if ((vch_comments == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(vch_comments));
+            }
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(risk_id));
+            if ((status_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(status_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int plan_id, 
+                    global::System.Nullable<int> parent_id, 
+                    string vch_number, 
+                    string vch_recomendation, 
+                    string vch_correct_actions, 
+                    int employee_ID, 
+                    System.DateTime dtm_expired, 
+                    string vch_comments, 
+                    int risk_id, 
+                    global::System.Nullable<int> status_id, 
+                    int Original_content_id, 
+                    int Original_plan_id, 
+                    global::System.Nullable<int> Original_parent_id, 
+                    string Original_vch_number, 
+                    int Original_employee_ID, 
+                    System.DateTime Original_dtm_expired, 
+                    int Original_risk_id, 
+                    global::System.Nullable<int> Original_status_id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(plan_id));
+            if ((parent_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(parent_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((vch_number == null)) {
+                throw new global::System.ArgumentNullException("vch_number");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(vch_number));
+            }
+            if ((vch_recomendation == null)) {
+                throw new global::System.ArgumentNullException("vch_recomendation");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(vch_recomendation));
+            }
+            if ((vch_correct_actions == null)) {
+                throw new global::System.ArgumentNullException("vch_correct_actions");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(vch_correct_actions));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(employee_ID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(dtm_expired));
+            if ((vch_comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(vch_comments));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(risk_id));
+            if ((status_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(status_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_content_id));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_plan_id));
+            if ((Original_parent_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_parent_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_vch_number == null)) {
+                throw new global::System.ArgumentNullException("Original_vch_number");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_vch_number));
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_employee_ID));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_dtm_expired));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_risk_id));
+            if ((Original_status_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_status_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tbl_Content_StatusTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public tbl_Content_StatusTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tbl_Content_Status";
+            tableMapping.ColumnMappings.Add("status_id", "status_id");
+            tableMapping.ColumnMappings.Add("vch_name", "vch_name");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM tbl_Content_Status\r\nWHERE        (status_id = ?)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_Content_Status` (`vch_name`) VALUES (?)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_name", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE       tbl_Content_Status\r\nSET                vch_name = ?\r\nWHERE        (s" +
+                "tatus_id = ?)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vch_name", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vch_name", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Original, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::AuditHelper.Properties.Settings.Default.auditHelperConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT status_id, vch_name FROM tbl_Content_Status";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT status_id FROM tbl_Content_Status";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT status_id, vch_name FROM tbl_Content_Status\r\nwhere status_id = ?";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        TOP 1 status_id\r\nFROM            tbl_Content_Status\r\nORDER BY statu" +
+                "s_id DESC";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(auditHelperDataSet.tbl_Content_StatusDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual auditHelperDataSet.tbl_Content_StatusDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            auditHelperDataSet.tbl_Content_StatusDataTable dataTable = new auditHelperDataSet.tbl_Content_StatusDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual auditHelperDataSet.tbl_Content_StatusDataTable GetAllIDs() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            auditHelperDataSet.tbl_Content_StatusDataTable dataTable = new auditHelperDataSet.tbl_Content_StatusDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual auditHelperDataSet.tbl_Content_StatusDataTable GetDataByID(int status_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(status_id));
+            auditHelperDataSet.tbl_Content_StatusDataTable dataTable = new auditHelperDataSet.tbl_Content_StatusDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(auditHelperDataSet.tbl_Content_StatusDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(auditHelperDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_Content_Status");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int status_id) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(status_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string vch_name) {
+            if ((vch_name == null)) {
+                throw new global::System.ArgumentNullException("vch_name");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(vch_name));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string vch_name, int Original_status_id) {
+            if ((vch_name == null)) {
+                throw new global::System.ArgumentNullException("vch_name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(vch_name));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_status_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetLastID() {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6379,11 +7246,13 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
         
         private tbl_PlanTableAdapter _tbl_PlanTableAdapter;
         
-        private tbl_Plan_ContentTableAdapter _tbl_Plan_ContentTableAdapter;
-        
         private tbl_PlanCoordinateTableAdapter _tbl_PlanCoordinateTableAdapter;
         
         private tbl_Responsible_PersonsTableAdapter _tbl_Responsible_PersonsTableAdapter;
+        
+        private tbl_Plan_ContentTableAdapter _tbl_Plan_ContentTableAdapter;
+        
+        private tbl_Content_StatusTableAdapter _tbl_Content_StatusTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -6461,20 +7330,6 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_Plan_ContentTableAdapter tbl_Plan_ContentTableAdapter {
-            get {
-                return this._tbl_Plan_ContentTableAdapter;
-            }
-            set {
-                this._tbl_Plan_ContentTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public tbl_PlanCoordinateTableAdapter tbl_PlanCoordinateTableAdapter {
             get {
                 return this._tbl_PlanCoordinateTableAdapter;
@@ -6495,6 +7350,34 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
             }
             set {
                 this._tbl_Responsible_PersonsTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public tbl_Plan_ContentTableAdapter tbl_Plan_ContentTableAdapter {
+            get {
+                return this._tbl_Plan_ContentTableAdapter;
+            }
+            set {
+                this._tbl_Plan_ContentTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public tbl_Content_StatusTableAdapter tbl_Content_StatusTableAdapter {
+            get {
+                return this._tbl_Content_StatusTableAdapter;
+            }
+            set {
+                this._tbl_Content_StatusTableAdapter = value;
             }
         }
         
@@ -6533,10 +7416,6 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                             && (this._tbl_PlanTableAdapter.Connection != null))) {
                     return this._tbl_PlanTableAdapter.Connection;
                 }
-                if (((this._tbl_Plan_ContentTableAdapter != null) 
-                            && (this._tbl_Plan_ContentTableAdapter.Connection != null))) {
-                    return this._tbl_Plan_ContentTableAdapter.Connection;
-                }
                 if (((this._tbl_PlanCoordinateTableAdapter != null) 
                             && (this._tbl_PlanCoordinateTableAdapter.Connection != null))) {
                     return this._tbl_PlanCoordinateTableAdapter.Connection;
@@ -6544,6 +7423,14 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 if (((this._tbl_Responsible_PersonsTableAdapter != null) 
                             && (this._tbl_Responsible_PersonsTableAdapter.Connection != null))) {
                     return this._tbl_Responsible_PersonsTableAdapter.Connection;
+                }
+                if (((this._tbl_Plan_ContentTableAdapter != null) 
+                            && (this._tbl_Plan_ContentTableAdapter.Connection != null))) {
+                    return this._tbl_Plan_ContentTableAdapter.Connection;
+                }
+                if (((this._tbl_Content_StatusTableAdapter != null) 
+                            && (this._tbl_Content_StatusTableAdapter.Connection != null))) {
+                    return this._tbl_Content_StatusTableAdapter.Connection;
                 }
                 return null;
             }
@@ -6570,13 +7457,16 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 if ((this._tbl_PlanTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tbl_Plan_ContentTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._tbl_PlanCoordinateTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._tbl_Responsible_PersonsTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._tbl_Plan_ContentTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._tbl_Content_StatusTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -6614,6 +7504,15 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tbl_PlanTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tbl_Content_StatusTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_Content_Status.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_Content_StatusTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6685,6 +7584,14 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tbl_PlanTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tbl_Content_StatusTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_Content_Status.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_Content_StatusTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6761,6 +7668,14 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tbl_OutsideEmployeeTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_Content_StatusTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_Content_Status.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_Content_StatusTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6847,11 +7762,6 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tbl_Plan_ContentTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_Plan_ContentTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._tbl_PlanCoordinateTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tbl_PlanCoordinateTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -6859,6 +7769,16 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
             }
             if (((this._tbl_Responsible_PersonsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tbl_Responsible_PersonsTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._tbl_Plan_ContentTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_Plan_ContentTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._tbl_Content_StatusTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_Content_StatusTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -6930,15 +7850,6 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_PlanTableAdapter.Adapter);
                     }
                 }
-                if ((this._tbl_Plan_ContentTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_Plan_ContentTableAdapter, this._tbl_Plan_ContentTableAdapter.Connection);
-                    this._tbl_Plan_ContentTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._tbl_Plan_ContentTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._tbl_Plan_ContentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_Plan_ContentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_Plan_ContentTableAdapter.Adapter);
-                    }
-                }
                 if ((this._tbl_PlanCoordinateTableAdapter != null)) {
                     revertConnections.Add(this._tbl_PlanCoordinateTableAdapter, this._tbl_PlanCoordinateTableAdapter.Connection);
                     this._tbl_PlanCoordinateTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
@@ -6955,6 +7866,24 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                     if (this._tbl_Responsible_PersonsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tbl_Responsible_PersonsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_Responsible_PersonsTableAdapter.Adapter);
+                    }
+                }
+                if ((this._tbl_Plan_ContentTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_Plan_ContentTableAdapter, this._tbl_Plan_ContentTableAdapter.Connection);
+                    this._tbl_Plan_ContentTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._tbl_Plan_ContentTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._tbl_Plan_ContentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_Plan_ContentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_Plan_ContentTableAdapter.Adapter);
+                    }
+                }
+                if ((this._tbl_Content_StatusTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_Content_StatusTableAdapter, this._tbl_Content_StatusTableAdapter.Connection);
+                    this._tbl_Content_StatusTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._tbl_Content_StatusTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._tbl_Content_StatusTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_Content_StatusTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_Content_StatusTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -7031,10 +7960,6 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                     this._tbl_PlanTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._tbl_PlanTableAdapter]));
                     this._tbl_PlanTableAdapter.Transaction = null;
                 }
-                if ((this._tbl_Plan_ContentTableAdapter != null)) {
-                    this._tbl_Plan_ContentTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._tbl_Plan_ContentTableAdapter]));
-                    this._tbl_Plan_ContentTableAdapter.Transaction = null;
-                }
                 if ((this._tbl_PlanCoordinateTableAdapter != null)) {
                     this._tbl_PlanCoordinateTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._tbl_PlanCoordinateTableAdapter]));
                     this._tbl_PlanCoordinateTableAdapter.Transaction = null;
@@ -7042,6 +7967,14 @@ namespace AuditHelper.DB.auditHelperDataSetTableAdapters {
                 if ((this._tbl_Responsible_PersonsTableAdapter != null)) {
                     this._tbl_Responsible_PersonsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._tbl_Responsible_PersonsTableAdapter]));
                     this._tbl_Responsible_PersonsTableAdapter.Transaction = null;
+                }
+                if ((this._tbl_Plan_ContentTableAdapter != null)) {
+                    this._tbl_Plan_ContentTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._tbl_Plan_ContentTableAdapter]));
+                    this._tbl_Plan_ContentTableAdapter.Transaction = null;
+                }
+                if ((this._tbl_Content_StatusTableAdapter != null)) {
+                    this._tbl_Content_StatusTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._tbl_Content_StatusTableAdapter]));
+                    this._tbl_Content_StatusTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
