@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DicContentStatus));
             this.itemsLB = new System.Windows.Forms.ListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newTSBtn = new System.Windows.Forms.ToolStripButton();
@@ -64,7 +63,7 @@
             // newTSBtn
             // 
             this.newTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newTSBtn.Image = ((System.Drawing.Image)(resources.GetObject("newTSBtn.Image")));
+            this.newTSBtn.Image = global::AuditHelper.Properties.Resources.Add_16;
             this.newTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newTSBtn.Name = "newTSBtn";
             this.newTSBtn.Size = new System.Drawing.Size(23, 22);
@@ -84,7 +83,7 @@
             // deleteBtn
             // 
             this.deleteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.deleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.Image")));
+            this.deleteBtn.Image = global::AuditHelper.Properties.Resources.Delete_16;
             this.deleteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(23, 22);
