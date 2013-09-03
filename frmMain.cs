@@ -75,5 +75,11 @@ namespace AuditHelper
             DicContentStatus frm = new DicContentStatus();
             frm.ShowDialog();
         }
+
+        private void plansLV_Resize(object sender, EventArgs e)
+        {
+            columnHeader1.Width = this.plansLV.Width - 361;
+            if (columnHeader1.Width < 190) columnHeader1.Width = 190;
+        }
     }
 }
