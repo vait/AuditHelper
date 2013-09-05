@@ -49,6 +49,7 @@
     <Compile Include="Classes\OutsideEmp.cs" />
     <Compile Include="Classes\OutsideOrg.cs" />
     <Compile Include="Classes\Plan.cs" />
+    <Compile Include="Classes\PlanContent.cs" />
     <Compile Include="DB\auditHelperDataSet.cs">
       <DependentUpon>auditHelperDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -64,6 +65,7 @@
     <Compile Include="DB\LevelOfRiskDM.cs" />
     <Compile Include="DB\OutsideEmpDM.cs" />
     <Compile Include="DB\OutsideOrgDM.cs" />
+    <Compile Include="DB\PlanDM.cs" />
     <Compile Include="Forms\EditDicContentStatus.cs">
       <SubType>Form</SubType>
     </Compile>

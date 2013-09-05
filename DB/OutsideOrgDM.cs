@@ -53,9 +53,7 @@ namespace AuditHelper.DB
             if (aEntity == null)
                 return false;
 
-            OutsideOrg tmp = aEntity;
-
-            if (_adapter.Delete(tmp.Id) >= 1)
+            if (_adapter.Delete(aEntity.Id) >= 1)
                 return true;
 
             return false;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "11",
@@ -50,22 +51,34 @@
             this.expiredPlansSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.notExpiredSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.contentTV = new System.Windows.Forms.TreeView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.addPlanTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.editPlanTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.deletePalnTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.prev50TSBtn = new System.Windows.Forms.ToolStripButton();
+            this.next50TSBtn = new System.Windows.Forms.ToolStripButton();
+            this.allTSBtn = new System.Windows.Forms.ToolStripButton();
             this.plansLV = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.addItemTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.editItemTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.deleteItemTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.contentTV = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -210,26 +223,6 @@
             this.splitContainer1.SplitterDistance = 561;
             this.splitContainer1.TabIndex = 3;
             // 
-            // contentTV
-            // 
-            this.contentTV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentTV.Location = new System.Drawing.Point(3, 16);
-            this.contentTV.Name = "contentTV";
-            this.contentTV.Size = new System.Drawing.Size(246, 392);
-            this.contentTV.TabIndex = 2;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.contentTV);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(252, 411);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Содержание";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
@@ -240,6 +233,82 @@
             this.groupBox2.Size = new System.Drawing.Size(561, 411);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addPlanTSBtn,
+            this.editPlanTSBtn,
+            this.deletePalnTSBtn,
+            this.prev50TSBtn,
+            this.next50TSBtn,
+            this.allTSBtn});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 383);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(555, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // addPlanTSBtn
+            // 
+            this.addPlanTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.addPlanTSBtn.Image = global::AuditHelper.Properties.Resources.Add_16;
+            this.addPlanTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.addPlanTSBtn.Name = "addPlanTSBtn";
+            this.addPlanTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.addPlanTSBtn.Text = "toolStripButton1";
+            this.addPlanTSBtn.ToolTipText = "Добавить план";
+            // 
+            // editPlanTSBtn
+            // 
+            this.editPlanTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editPlanTSBtn.Image = global::AuditHelper.Properties.Resources.Edit_16;
+            this.editPlanTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editPlanTSBtn.Name = "editPlanTSBtn";
+            this.editPlanTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.editPlanTSBtn.Text = "toolStripButton1";
+            this.editPlanTSBtn.ToolTipText = "Редактировать план";
+            // 
+            // deletePalnTSBtn
+            // 
+            this.deletePalnTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deletePalnTSBtn.Image = global::AuditHelper.Properties.Resources.Delete_16;
+            this.deletePalnTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.deletePalnTSBtn.Name = "deletePalnTSBtn";
+            this.deletePalnTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.deletePalnTSBtn.Text = "toolStripButton1";
+            this.deletePalnTSBtn.ToolTipText = "Удалить план";
+            // 
+            // prev50TSBtn
+            // 
+            this.prev50TSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.prev50TSBtn.Image = ((System.Drawing.Image)(resources.GetObject("prev50TSBtn.Image")));
+            this.prev50TSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.prev50TSBtn.Name = "prev50TSBtn";
+            this.prev50TSBtn.Size = new System.Drawing.Size(23, 22);
+            this.prev50TSBtn.Text = "toolStripButton1";
+            this.prev50TSBtn.ToolTipText = "Предыдущие 50";
+            // 
+            // next50TSBtn
+            // 
+            this.next50TSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.next50TSBtn.Image = ((System.Drawing.Image)(resources.GetObject("next50TSBtn.Image")));
+            this.next50TSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.next50TSBtn.Name = "next50TSBtn";
+            this.next50TSBtn.Size = new System.Drawing.Size(23, 22);
+            this.next50TSBtn.Text = "toolStripButton2";
+            this.next50TSBtn.ToolTipText = "Следующие 50";
+            // 
+            // allTSBtn
+            // 
+            this.allTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.allTSBtn.Image = ((System.Drawing.Image)(resources.GetObject("allTSBtn.Image")));
+            this.allTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.allTSBtn.Name = "allTSBtn";
+            this.allTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.allTSBtn.Text = "toolStripButton1";
+            this.allTSBtn.ToolTipText = "Все записи";
             // 
             // plansLV
             // 
@@ -288,14 +357,71 @@
             this.columnHeader4.Text = "Дата ближайшего пункта";
             this.columnHeader4.Width = 146;
             // 
-            // toolStrip1
+            // groupBox1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.Location = new System.Drawing.Point(3, 383);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(555, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.toolStrip2);
+            this.groupBox1.Controls.Add(this.contentTV);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(252, 411);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Содержание";
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addItemTSBtn,
+            this.editItemTSBtn,
+            this.deleteItemTSBtn});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 383);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(246, 25);
+            this.toolStrip2.TabIndex = 3;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // addItemTSBtn
+            // 
+            this.addItemTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.addItemTSBtn.Image = global::AuditHelper.Properties.Resources.Add_16;
+            this.addItemTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.addItemTSBtn.Name = "addItemTSBtn";
+            this.addItemTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.addItemTSBtn.Text = "toolStripButton1";
+            this.addItemTSBtn.ToolTipText = "Добавить раздел";
+            // 
+            // editItemTSBtn
+            // 
+            this.editItemTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editItemTSBtn.Image = global::AuditHelper.Properties.Resources.Edit_16;
+            this.editItemTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editItemTSBtn.Name = "editItemTSBtn";
+            this.editItemTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.editItemTSBtn.Text = "toolStripButton2";
+            this.editItemTSBtn.ToolTipText = "Редактировать раздел";
+            // 
+            // deleteItemTSBtn
+            // 
+            this.deleteItemTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deleteItemTSBtn.Image = global::AuditHelper.Properties.Resources.Delete_16;
+            this.deleteItemTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.deleteItemTSBtn.Name = "deleteItemTSBtn";
+            this.deleteItemTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.deleteItemTSBtn.Text = "toolStripButton3";
+            this.deleteItemTSBtn.ToolTipText = "Удалить раздел";
+            // 
+            // contentTV
+            // 
+            this.contentTV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentTV.Location = new System.Drawing.Point(3, 16);
+            this.contentTV.Name = "contentTV";
+            this.contentTV.Size = new System.Drawing.Size(246, 364);
+            this.contentTV.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -316,9 +442,14 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,6 +481,16 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ToolStripButton addPlanTSBtn;
+        private System.Windows.Forms.ToolStripButton editPlanTSBtn;
+        private System.Windows.Forms.ToolStripButton deletePalnTSBtn;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton addItemTSBtn;
+        private System.Windows.Forms.ToolStripButton editItemTSBtn;
+        private System.Windows.Forms.ToolStripButton deleteItemTSBtn;
+        private System.Windows.Forms.ToolStripButton prev50TSBtn;
+        private System.Windows.Forms.ToolStripButton next50TSBtn;
+        private System.Windows.Forms.ToolStripButton allTSBtn;
     }
 }
 
