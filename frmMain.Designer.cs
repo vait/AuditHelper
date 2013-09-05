@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "11",
@@ -70,6 +69,7 @@
             this.editItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.deleteItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.contentTV = new System.Windows.Forms.TreeView();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -241,6 +241,7 @@
             this.addPlanTSBtn,
             this.editPlanTSBtn,
             this.deletePalnTSBtn,
+            this.toolStripSeparator1,
             this.prev50TSBtn,
             this.next50TSBtn,
             this.allTSBtn});
@@ -283,7 +284,7 @@
             // prev50TSBtn
             // 
             this.prev50TSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.prev50TSBtn.Image = ((System.Drawing.Image)(resources.GetObject("prev50TSBtn.Image")));
+            this.prev50TSBtn.Image = global::AuditHelper.Properties.Resources.Previous_16;
             this.prev50TSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.prev50TSBtn.Name = "prev50TSBtn";
             this.prev50TSBtn.Size = new System.Drawing.Size(23, 22);
@@ -293,7 +294,7 @@
             // next50TSBtn
             // 
             this.next50TSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.next50TSBtn.Image = ((System.Drawing.Image)(resources.GetObject("next50TSBtn.Image")));
+            this.next50TSBtn.Image = global::AuditHelper.Properties.Resources.Next_16;
             this.next50TSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.next50TSBtn.Name = "next50TSBtn";
             this.next50TSBtn.Size = new System.Drawing.Size(23, 22);
@@ -303,7 +304,7 @@
             // allTSBtn
             // 
             this.allTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.allTSBtn.Image = ((System.Drawing.Image)(resources.GetObject("allTSBtn.Image")));
+            this.allTSBtn.Image = global::AuditHelper.Properties.Resources.ShowAll_16;
             this.allTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.allTSBtn.Name = "allTSBtn";
             this.allTSBtn.Size = new System.Drawing.Size(23, 22);
@@ -423,6 +424,11 @@
             this.contentTV.Size = new System.Drawing.Size(246, 364);
             this.contentTV.TabIndex = 2;
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,6 +497,7 @@
         private System.Windows.Forms.ToolStripButton prev50TSBtn;
         private System.Windows.Forms.ToolStripButton next50TSBtn;
         private System.Windows.Forms.ToolStripButton allTSBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

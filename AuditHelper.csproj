@@ -208,6 +208,11 @@
     <Content Include="Images\Delete_32.png" />
     <Content Include="Images\Edit_16.png" />
     <Content Include="Images\Edit_32.png" />
+    <Content Include="Images\Next_16.png" />
+    <Content Include="Images\Next_32.png" />
+    <Content Include="Images\Previous_16.png" />
+    <Content Include="Images\Previous_32.png" />
+    <Content Include="Images\ShowAll_16.png" />
     <Content Include="Images\startup_icon.jpg" />
     <Content Include="Images\startup_icon.png" />
   </ItemGroup>
