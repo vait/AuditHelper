@@ -26,6 +26,7 @@ namespace AuditHelper.DB
         public static readonly OutsideOrgDM OutsideOrgDM = new OutsideOrgDM();
         public static readonly OutsideEmpDM OutsideEmpDM = new OutsideEmpDM();
         public static readonly ContentStatusDM ContentStatusDM = new ContentStatusDM();
+        public static readonly PlanDM PlanDM = new PlanDM();
     }
 
 

@@ -46,6 +46,7 @@
             this.уровниРискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.статусыРекомендацийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.pageSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.totalPlansSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.expiredPlansSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.notExpiredSSL = new System.Windows.Forms.ToolStripStatusLabel();
@@ -55,6 +56,7 @@
             this.addPlanTSBtn = new System.Windows.Forms.ToolStripButton();
             this.editPlanTSBtn = new System.Windows.Forms.ToolStripButton();
             this.deletePalnTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.prev50TSBtn = new System.Windows.Forms.ToolStripButton();
             this.next50TSBtn = new System.Windows.Forms.ToolStripButton();
             this.allTSBtn = new System.Windows.Forms.ToolStripButton();
@@ -69,7 +71,6 @@
             this.editItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.deleteItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.contentTV = new System.Windows.Forms.TreeView();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -107,12 +108,14 @@
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
             this.создатьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.создатьToolStripMenuItem.Text = "Создать";
+            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
             // 
             // редактироватьToolStripMenuItem
             // 
             this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
             this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.редактироватьToolStripMenuItem.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem.Click += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
@@ -162,6 +165,7 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pageSSL,
             this.totalPlansSSL,
             this.expiredPlansSSL,
             this.notExpiredSSL});
@@ -170,6 +174,15 @@
             this.statusStrip1.Size = new System.Drawing.Size(817, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // pageSSL
+            // 
+            this.pageSSL.AutoSize = false;
+            this.pageSSL.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.pageSSL.Name = "pageSSL";
+            this.pageSSL.Size = new System.Drawing.Size(100, 17);
+            this.pageSSL.Text = "Страница: ";
+            this.pageSSL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // totalPlansSSL
             // 
@@ -258,8 +271,9 @@
             this.addPlanTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addPlanTSBtn.Name = "addPlanTSBtn";
             this.addPlanTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.addPlanTSBtn.Text = "toolStripButton1";
-            this.addPlanTSBtn.ToolTipText = "Добавить план";
+            this.addPlanTSBtn.Text = "Создать план";
+            this.addPlanTSBtn.ToolTipText = "Создать план";
+            this.addPlanTSBtn.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
             // 
             // editPlanTSBtn
             // 
@@ -268,8 +282,9 @@
             this.editPlanTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editPlanTSBtn.Name = "editPlanTSBtn";
             this.editPlanTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.editPlanTSBtn.Text = "toolStripButton1";
+            this.editPlanTSBtn.Text = "Редактировать план";
             this.editPlanTSBtn.ToolTipText = "Редактировать план";
+            this.editPlanTSBtn.Click += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
             // 
             // deletePalnTSBtn
             // 
@@ -278,18 +293,25 @@
             this.deletePalnTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.deletePalnTSBtn.Name = "deletePalnTSBtn";
             this.deletePalnTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.deletePalnTSBtn.Text = "toolStripButton1";
+            this.deletePalnTSBtn.Text = "Удалить план";
             this.deletePalnTSBtn.ToolTipText = "Удалить план";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // prev50TSBtn
             // 
             this.prev50TSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.prev50TSBtn.Enabled = false;
             this.prev50TSBtn.Image = global::AuditHelper.Properties.Resources.Previous_16;
             this.prev50TSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.prev50TSBtn.Name = "prev50TSBtn";
             this.prev50TSBtn.Size = new System.Drawing.Size(23, 22);
             this.prev50TSBtn.Text = "toolStripButton1";
             this.prev50TSBtn.ToolTipText = "Предыдущие 50";
+            this.prev50TSBtn.Click += new System.EventHandler(this.prev50TSBtn_Click);
             // 
             // next50TSBtn
             // 
@@ -300,9 +322,11 @@
             this.next50TSBtn.Size = new System.Drawing.Size(23, 22);
             this.next50TSBtn.Text = "toolStripButton2";
             this.next50TSBtn.ToolTipText = "Следующие 50";
+            this.next50TSBtn.Click += new System.EventHandler(this.next50TSBtn_Click);
             // 
             // allTSBtn
             // 
+            this.allTSBtn.CheckOnClick = true;
             this.allTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.allTSBtn.Image = global::AuditHelper.Properties.Resources.ShowAll_16;
             this.allTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -310,6 +334,7 @@
             this.allTSBtn.Size = new System.Drawing.Size(23, 22);
             this.allTSBtn.Text = "toolStripButton1";
             this.allTSBtn.ToolTipText = "Все записи";
+            this.allTSBtn.CheckStateChanged += new System.EventHandler(this.allTSBtn_CheckStateChanged);
             // 
             // plansLV
             // 
@@ -336,6 +361,8 @@
             this.plansLV.TabIndex = 0;
             this.plansLV.UseCompatibleStateImageBehavior = false;
             this.plansLV.View = System.Windows.Forms.View.Details;
+            this.plansLV.SelectedIndexChanged += new System.EventHandler(this.plansLV_SelectedIndexChanged);
+            this.plansLV.DoubleClick += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
             this.plansLV.Resize += new System.EventHandler(this.plansLV_Resize);
             // 
             // columnHeader1
@@ -424,11 +451,6 @@
             this.contentTV.Size = new System.Drawing.Size(246, 364);
             this.contentTV.TabIndex = 2;
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,6 +462,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Помошник аудитора";
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -498,6 +522,7 @@
         private System.Windows.Forms.ToolStripButton next50TSBtn;
         private System.Windows.Forms.ToolStripButton allTSBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripStatusLabel pageSSL;
     }
 }
 

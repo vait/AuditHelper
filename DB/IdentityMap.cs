@@ -93,7 +93,16 @@ namespace AuditHelper.DB
             _entityDeleter = entityDeleter;
         }
 
-        
+        public int Count
+        {
+            get
+            {
+                lock (_getLock)
+                {
+                    return _entities.Count;
+                }
+            }
+        }
     }
 
     public static class ApplicationMap
@@ -121,5 +130,11 @@ namespace AuditHelper.DB
                 ApplicationDataMappers.ContentStatusDM.Update,
                 ApplicationDataMappers.ContentStatusDM.Insert,
                 ApplicationDataMappers.ContentStatusDM.Delete);
+      
+        public static readonly EntityMap<Plan> Plan =
+            new EntityMap<Plan>(id => ApplicationDataMappers.PlanDM.GetByID(id),
+                ApplicationDataMappers.PlanDM.Update,
+                ApplicationDataMappers.PlanDM.Insert,
+                ApplicationDataMappers.PlanDM.Delete);
     }
 }

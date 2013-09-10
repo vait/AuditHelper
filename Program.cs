@@ -15,6 +15,8 @@ namespace AuditHelper
         public static bool is64BitProcess = (IntPtr.Size == 8);
         public static bool is64BitOperatingSystem = is64BitProcess || InternalCheckIsWow64();
         public static bool isReady = true;
+        public static int countNearestExpired = 0;
+        public static int countExpired = 0;
         
         [DllImport("kernel32.dll", SetLastError = true, CallingConvention = CallingConvention.Winapi)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -118,6 +120,23 @@ namespace AuditHelper
                 foreach (int id in ids)
                 {
                     tmp = DB.ApplicationMap.OutsideEmp[id];
+                }
+
+                worker.ReportProgress(0, "Загрузка планов...");
+
+                ids = DB.ApplicationDataMappers.PlanDM.GetAllIDs();
+
+                foreach (int id in ids)
+                {
+                    tmp = DB.ApplicationMap.Plan[id];
+                    if ((tmp as Classes.Plan).NearestDate != DateTime.MaxValue)
+                    {
+                        if ((tmp as Classes.Plan).NearestDate <= DateTime.Now)
+                            ++countExpired;
+
+                        if ((tmp as Classes.Plan).NearestDate <= DateTime.Now.AddDays(4) && (tmp as Classes.Plan).NearestDate > DateTime.Now)
+                            ++countNearestExpired;
+                    }
                 }
             }
         }

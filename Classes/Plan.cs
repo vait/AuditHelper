@@ -32,10 +32,22 @@ namespace AuditHelper.Classes
         }
 
         private int _org = -1;
-        public int Org
+        public int OrgID
         {
             get { return _org; }
             set { _org = value; }
+        }
+
+        private DateTime _nearestDate = DateTime.MaxValue;
+        public DateTime NearestDate
+        {
+            get { return _nearestDate; }
+        }
+
+        private DateTime _endDate = DateTime.MinValue;
+        public DateTime EndDate
+        {
+            get { return _endDate; }
         }
 
         private List<int> _content = new List<int>();
@@ -44,19 +56,39 @@ namespace AuditHelper.Classes
         {
             get
             {
-                //if (_content.Contains(index))
-//                    return ApplicationMap.PlanContent[index];
+/*                if (_content.Contains(index))
+                {
+                    return ApplicationMap.PlanContent[index];
+
+                }*/
                 return null;
+            }
+            set
+            {
+                this.Update();
             }
         }
 
-        public Plan(string aName, int aEmployee1, int aEmployee2, int aEmployee3, int aOrg, int aId = -1)
+        private void Update()
+        {
+         /*   DateTime minDate = DateTime.MaxValue;
+            foreach (int id in this._content)
+                if (ApplicationMap.PlanContent[index].ExpiredDate < minDate && ApplicationMap.PlanContent[index].Status == -1)
+                    minDate = ApplicationMap.PlanContent[index].ExpiredDate;
+
+            this._nearestDate = minDate;*/
+        }
+        
+        public Plan(string aName, int aEmployee1, int aEmployee2, int aEmployee3, 
+            int aOrg, DateTime aNearestDate, DateTime aEndDate, int aId = -1)
             : base(aName, aId) 
         {
             this._employee1ID = aEmployee1;
             this._employee2ID = aEmployee2;
             this._employee3ID = aEmployee3;
             this._org = aOrg;
+            this._nearestDate = aNearestDate;
+            this._endDate = aEndDate;
         }        
     }
 }

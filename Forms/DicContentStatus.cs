@@ -67,12 +67,14 @@ namespace AuditHelper.Forms
 
         private void itemsLB_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            this.ShowEditForm();
+            if (this._selectedID != -1)
+                this.ShowEditForm();
         }
 
         private void editTSBtn_Click(object sender, EventArgs e)
         {
-            this.ShowEditForm();
+            if (this._selectedID != -1)
+                this.ShowEditForm();
         }
 
         private void newTSBtn_Click(object sender, EventArgs e)
