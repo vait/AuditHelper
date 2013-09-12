@@ -28,13 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "11",
             "12",
             "13"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("2");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("2");
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("3");
+            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Node7");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Node8");
+            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode107,
+            treeNode108,
+            treeNode109,
+            treeNode110,
+            treeNode111});
+            System.Windows.Forms.TreeNode treeNode113 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode114 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode115 = new System.Windows.Forms.TreeNode("Node11");
+            System.Windows.Forms.TreeNode treeNode116 = new System.Windows.Forms.TreeNode("Node12");
+            System.Windows.Forms.TreeNode treeNode117 = new System.Windows.Forms.TreeNode("Node13");
+            System.Windows.Forms.TreeNode treeNode118 = new System.Windows.Forms.TreeNode("Node14");
+            System.Windows.Forms.TreeNode treeNode119 = new System.Windows.Forms.TreeNode("Node3", new System.Windows.Forms.TreeNode[] {
+            treeNode114,
+            treeNode115,
+            treeNode116,
+            treeNode117,
+            treeNode118});
+            System.Windows.Forms.TreeNode treeNode120 = new System.Windows.Forms.TreeNode("Node4");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.планToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +96,10 @@
             this.editItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.deleteItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.contentTV = new System.Windows.Forms.TreeView();
+            this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.редактироватьПунктToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьПунктToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -86,6 +115,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.планToolStripMenuItem,
+            this.содержаниеToolStripMenuItem,
             this.справочникиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -122,6 +152,7 @@
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // справочникиToolStripMenuItem
             // 
@@ -233,7 +264,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(817, 411);
-            this.splitContainer1.SplitterDistance = 561;
+            this.splitContainer1.SplitterDistance = 556;
             this.splitContainer1.TabIndex = 3;
             // 
             // groupBox2
@@ -243,7 +274,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(561, 411);
+            this.groupBox2.Size = new System.Drawing.Size(556, 411);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
@@ -260,7 +291,7 @@
             this.allTSBtn});
             this.toolStrip1.Location = new System.Drawing.Point(3, 383);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(555, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(550, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -295,6 +326,7 @@
             this.deletePalnTSBtn.Size = new System.Drawing.Size(23, 22);
             this.deletePalnTSBtn.Text = "Удалить план";
             this.deletePalnTSBtn.ToolTipText = "Удалить план";
+            this.deletePalnTSBtn.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -350,14 +382,14 @@
             this.plansLV.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.plansLV.HideSelection = false;
             this.plansLV.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem22,
+            listViewItem23,
+            listViewItem24});
             this.plansLV.Location = new System.Drawing.Point(3, 16);
             this.plansLV.MultiSelect = false;
             this.plansLV.Name = "plansLV";
             this.plansLV.ShowGroups = false;
-            this.plansLV.Size = new System.Drawing.Size(555, 364);
+            this.plansLV.Size = new System.Drawing.Size(550, 364);
             this.plansLV.TabIndex = 0;
             this.plansLV.UseCompatibleStateImageBehavior = false;
             this.plansLV.View = System.Windows.Forms.View.Details;
@@ -393,7 +425,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(252, 411);
+            this.groupBox1.Size = new System.Drawing.Size(257, 411);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Содержание";
@@ -407,7 +439,7 @@
             this.deleteItemTSBtn});
             this.toolStrip2.Location = new System.Drawing.Point(3, 383);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(246, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(251, 25);
             this.toolStrip2.TabIndex = 3;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -418,8 +450,9 @@
             this.addItemTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addItemTSBtn.Name = "addItemTSBtn";
             this.addItemTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.addItemTSBtn.Text = "toolStripButton1";
-            this.addItemTSBtn.ToolTipText = "Добавить раздел";
+            this.addItemTSBtn.Text = "Добавить пункт";
+            this.addItemTSBtn.ToolTipText = "Добавить пункт";
+            this.addItemTSBtn.Click += new System.EventHandler(this.создатьToolStripMenuItem1_Click);
             // 
             // editItemTSBtn
             // 
@@ -428,8 +461,9 @@
             this.editItemTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editItemTSBtn.Name = "editItemTSBtn";
             this.editItemTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.editItemTSBtn.Text = "toolStripButton2";
-            this.editItemTSBtn.ToolTipText = "Редактировать раздел";
+            this.editItemTSBtn.Text = "Редактировать пункт";
+            this.editItemTSBtn.ToolTipText = "Редактировать пункт";
+            this.editItemTSBtn.Click += new System.EventHandler(this.редактироватьПунктToolStripMenuItem_Click);
             // 
             // deleteItemTSBtn
             // 
@@ -438,8 +472,9 @@
             this.deleteItemTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.deleteItemTSBtn.Name = "deleteItemTSBtn";
             this.deleteItemTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.deleteItemTSBtn.Text = "toolStripButton3";
-            this.deleteItemTSBtn.ToolTipText = "Удалить раздел";
+            this.deleteItemTSBtn.Text = "Удалить пункт";
+            this.deleteItemTSBtn.ToolTipText = "Удалить пункт";
+            this.deleteItemTSBtn.Click += new System.EventHandler(this.удалитьПунктToolStripMenuItem_Click);
             // 
             // contentTV
             // 
@@ -448,8 +483,77 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentTV.Location = new System.Drawing.Point(3, 16);
             this.contentTV.Name = "contentTV";
-            this.contentTV.Size = new System.Drawing.Size(246, 364);
+            treeNode106.Name = "Node0";
+            treeNode106.Text = "Node0";
+            treeNode107.Name = "Node5";
+            treeNode107.Text = "Node5";
+            treeNode108.Name = "Node6";
+            treeNode108.Text = "Node6";
+            treeNode109.Name = "Node7";
+            treeNode109.Text = "Node7";
+            treeNode110.Name = "Node8";
+            treeNode110.Text = "Node8";
+            treeNode111.Name = "Node9";
+            treeNode111.Text = "Node9";
+            treeNode112.Name = "Node1";
+            treeNode112.Text = "Node1";
+            treeNode113.Name = "Node2";
+            treeNode113.Text = "Node2";
+            treeNode114.Name = "Node10";
+            treeNode114.Text = "Node10";
+            treeNode115.Name = "Node11";
+            treeNode115.Text = "Node11";
+            treeNode116.Name = "Node12";
+            treeNode116.Text = "Node12";
+            treeNode117.Name = "Node13";
+            treeNode117.Text = "Node13";
+            treeNode118.Name = "Node14";
+            treeNode118.Text = "Node14";
+            treeNode119.Name = "Node3";
+            treeNode119.Text = "Node3";
+            treeNode120.Name = "Node4";
+            treeNode120.Text = "Node4";
+            this.contentTV.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode106,
+            treeNode112,
+            treeNode113,
+            treeNode119,
+            treeNode120});
+            this.contentTV.Size = new System.Drawing.Size(251, 364);
             this.contentTV.TabIndex = 2;
+            this.contentTV.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.contentTV_AfterSelect);
+            this.contentTV.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.contentTV_NodeMouseDoubleClick);
+            // 
+            // содержаниеToolStripMenuItem
+            // 
+            this.содержаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.создатьToolStripMenuItem1,
+            this.редактироватьПунктToolStripMenuItem,
+            this.удалитьПунктToolStripMenuItem});
+            this.содержаниеToolStripMenuItem.Name = "содержаниеToolStripMenuItem";
+            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.содержаниеToolStripMenuItem.Text = "Содержание";
+            // 
+            // создатьToolStripMenuItem1
+            // 
+            this.создатьToolStripMenuItem1.Name = "создатьToolStripMenuItem1";
+            this.создатьToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.создатьToolStripMenuItem1.Text = "Создать пункт";
+            this.создатьToolStripMenuItem1.Click += new System.EventHandler(this.создатьToolStripMenuItem1_Click);
+            // 
+            // редактироватьПунктToolStripMenuItem
+            // 
+            this.редактироватьПунктToolStripMenuItem.Name = "редактироватьПунктToolStripMenuItem";
+            this.редактироватьПунктToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.редактироватьПунктToolStripMenuItem.Text = "Редактировать пункт";
+            this.редактироватьПунктToolStripMenuItem.Click += new System.EventHandler(this.редактироватьПунктToolStripMenuItem_Click);
+            // 
+            // удалитьПунктToolStripMenuItem
+            // 
+            this.удалитьПунктToolStripMenuItem.Name = "удалитьПунктToolStripMenuItem";
+            this.удалитьПунктToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.удалитьПунктToolStripMenuItem.Text = "Удалить пункт";
+            this.удалитьПунктToolStripMenuItem.Click += new System.EventHandler(this.удалитьПунктToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -523,6 +627,10 @@
         private System.Windows.Forms.ToolStripButton allTSBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripStatusLabel pageSSL;
+        private System.Windows.Forms.ToolStripMenuItem содержаниеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem редактироватьПунктToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалитьПунктToolStripMenuItem;
     }
 }
 

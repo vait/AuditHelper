@@ -50,5 +50,10 @@ namespace AuditHelper.Classes
         {
             return this._name;
         }
+
+        public static int CompareSimpleEntities(SimpleEntity x, SimpleEntity y)
+        {
+            return x.Name.CompareTo(y.Name);
+        }
     }
 }

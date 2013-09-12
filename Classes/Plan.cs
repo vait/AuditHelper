@@ -51,32 +51,46 @@ namespace AuditHelper.Classes
         }
 
         private List<int> _content = new List<int>();
+        public List<int> Content
+        {
+            get
+            {
+                return this._content;
+            }
+        }
 
         public PlanContent this[int index]
         {
             get
             {
-/*                if (_content.Contains(index))
+                if (_content.Contains(index) )
                 {
                     return ApplicationMap.PlanContent[index];
+                }
 
-                }*/
                 return null;
             }
             set
             {
-                this.Update();
+                ApplicationMap.PlanContent[index] = value;
+                if (value.Id == -1)
+                    //Загружаем индексы 
+                    this._content = ApplicationDataMappers.PlanContentDM.GetAllIDs(this.Id);
+
+                this.Update(value);
             }
         }
 
-        private void Update()
+        private void Update(PlanContent aContent)
         {
-         /*   DateTime minDate = DateTime.MaxValue;
-            foreach (int id in this._content)
-                if (ApplicationMap.PlanContent[index].ExpiredDate < minDate && ApplicationMap.PlanContent[index].Status == -1)
-                    minDate = ApplicationMap.PlanContent[index].ExpiredDate;
+            //Проверяем дату окончания (EndDate)
+            if (aContent.Expired > this.EndDate)
+                this._endDate = aContent.Expired;
 
-            this._nearestDate = minDate;*/
+            //Проверяем даты завершения
+            if (aContent.StatusId != -1)
+                if (aContent.Expired < this.NearestDate)
+                    this._nearestDate = aContent.Expired;
         }
         
         public Plan(string aName, int aEmployee1, int aEmployee2, int aEmployee3, 
@@ -89,6 +103,9 @@ namespace AuditHelper.Classes
             this._org = aOrg;
             this._nearestDate = aNearestDate;
             this._endDate = aEndDate;
+
+            //Загружаем индексы 
+            this._content = ApplicationDataMappers.PlanContentDM.GetAllIDs(this.Id);
         }        
     }
 }

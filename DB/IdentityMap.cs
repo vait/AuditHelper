@@ -136,5 +136,11 @@ namespace AuditHelper.DB
                 ApplicationDataMappers.PlanDM.Update,
                 ApplicationDataMappers.PlanDM.Insert,
                 ApplicationDataMappers.PlanDM.Delete);
+
+        public static readonly EntityMap<PlanContent> PlanContent =
+            new EntityMap<PlanContent>(id => ApplicationDataMappers.PlanContentDM.GetByID(id),
+                ApplicationDataMappers.PlanContentDM.Update,
+                ApplicationDataMappers.PlanContentDM.Insert,
+                ApplicationDataMappers.PlanContentDM.Delete);
     }
 }

@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>auditHelperDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB\PlanContentDM.cs" />
     <Compile Include="DB\ContentStatusDM.cs" />
     <Compile Include="DB\DataMapper.cs" />
     <Compile Include="DB\IdentityMap.cs" />

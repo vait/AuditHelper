@@ -12,7 +12,6 @@ using AuditHelper.DB;
 using AuditHelper.Classes;
 
 
-
 namespace AuditHelper
 {
     public partial class frmMain : Form
@@ -77,12 +76,98 @@ namespace AuditHelper
             plansLV.EndUpdate();
         }
 
+        private void LoadContent()
+        {
+            if (this._selectedPlanID == -1)
+            {
+                contentTV.Nodes.Clear();
+                return;
+            }
+
+            List<PlanContent> content = new List<PlanContent>();
+
+            //Заполняем содержание
+            foreach (int i in ApplicationMap.Plan[this._selectedPlanID].Content)
+            {
+                content.Add(ApplicationMap.PlanContent[i]);
+            }
+
+            /* Голый линк (вложенность только до второго уровня) */
+            //Получаем список всех родителей
+            List<PlanContent> parents = content.Where(parent => parent.ParentId == -1).ToList();
+            List<PlanContent> children = null;
+            parents.Sort(SimpleEntity.CompareSimpleEntities);
+
+            //Вывод
+            TreeNode parentNode, childNode;
+
+            foreach (PlanContent parent in parents)
+            {
+                parentNode = new TreeNode(parent.Name + " " + parent.Recomendation);
+                parentNode.Tag = parent.Id;
+                
+                children = content.Where(item => item.ParentId == parent.Id).ToList();
+                children.Sort(SimpleEntity.CompareSimpleEntities);
+                //Обходим потомков
+                foreach (PlanContent child in children)
+                {
+                    childNode = new TreeNode(child.Name + " " + child.Recomendation.Substring(0, 47) + "...");
+                    childNode.Tag = child.Id;
+                    parentNode.Nodes.Add(childNode);
+                }
+
+
+                this.contentTV.Nodes.Add(parentNode);
+            }
+        }
+
         private void ShowEditPlanForm()
         {
             EditPlan frm = new EditPlan();
             frm.EditableId = this._selectedPlanID;
             if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 this.LoadPlans();
+        }
+
+        private void ShowEditPlanContentForm()
+        {
+            EditPlan frm = new EditPlan();
+            frm.EditableId = this._selectedPlanContentId;
+            if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                this.LoadContent();
+        }
+
+        private bool DeletePlanContentData()
+        {
+            return true;
+        }
+
+        private bool DeletePlanData()
+        {
+            //Удаляем пункты плана
+            try
+            {
+                //ApplicationMap.Plan[_selectedPlanID].
+                //ApplicationMap.LevelsOfRisk.Delete(ApplicationMap.LevelsOfRisk[_selectedID]);
+            }
+            catch
+            {
+                return false;
+            }
+
+            //Удаляем сам план
+            try
+            {
+                //Удаляем 
+                //ApplicationMap.LevelsOfRisk.Delete(ApplicationMap.LevelsOfRisk[_selectedID]);
+            }
+            catch
+            {
+                return false;
+            }
+
+            this.LoadPlans();
+            return true;
         }
 
         public frmMain()
@@ -205,6 +290,8 @@ namespace AuditHelper
         {
             if (this._currentPage * _perPage > ApplicationMap.Plan.Count)
                 this.next50TSBtn.Enabled = false;
+
+            this.contentTV.Nodes.Clear();
         }
 
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -215,10 +302,78 @@ namespace AuditHelper
 
         private void plansLV_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this._selectedPlanContentId = -1;
+
             if ((sender as ListView).SelectedItems.Count > 0)
                 this._selectedPlanID = ((sender as ListView).SelectedItems[0].Tag as Entity).Id;
             else
                 this._selectedPlanID = -1;
+
+            this.LoadContent();
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this._selectedPlanID == -1)
+                return;
+
+            if (MessageBox.Show("Удалить выбранный план?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes)
+            {
+                return;
+            }
+
+            if (this.DeletePlanData())
+                MessageBox.Show("Запись успешно удалена", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void contentTV_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            this._selectedPlanContentId = (e.Node.Tag as SimpleEntity).Id;
+        }
+
+        private void contentTV_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Button != System.Windows.Forms.MouseButtons.Left)
+                return;
+
+            this._selectedPlanContentId = (e.Node.Tag as SimpleEntity).Id;
+        }
+
+        private void создатьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            /*List<SimpleEntity> aaa = new List<SimpleEntity>();
+                aaa.Add(new SimpleEntity("1"));
+                aaa.Add(new SimpleEntity("1.2"));
+                aaa.Add(new SimpleEntity("1.1"));
+                aaa.Add(new SimpleEntity("2"));
+                aaa.Add(new SimpleEntity("3"));
+                aaa.Add(new SimpleEntity("2.1"));
+                aaa.Sort(SimpleEntity.CompareSimpleEntities);
+
+                foreach (SimpleEntity a in aaa)
+                    MessageBox.Show(a.Name);*/
+            this._selectedPlanContentId = -1;
+            this.ShowEditPlanContentForm();
+        }
+
+        private void редактироватьПунктToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this._selectedPlanContentId != -1)
+                this.ShowEditPlanContentForm();
+        }
+
+        private void удалитьПунктToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this._selectedPlanContentId == -1)
+                return;
+
+            if (MessageBox.Show("Удалить выбранный пункт плана?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes)
+            {
+                return;
+            }
+
+            if (this.DeletePlanContentData())
+                MessageBox.Show("Запись успешно удалена", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }
