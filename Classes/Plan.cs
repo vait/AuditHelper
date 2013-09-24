@@ -80,6 +80,27 @@ namespace AuditHelper.Classes
                 this.Update(value);
             }
         }
+        /// <summary>
+        /// Remove Content by ID
+        /// </summary>
+        /// <param name="index">if -1 then remove all content</param>
+        public void DeleteContent(int index)
+        {
+            //Удаляем сам план
+            if (_content.Contains(index))
+            {
+                ApplicationMap.PlanContent.Delete(ApplicationMap.PlanContent[index]);
+                _content.Remove(index);
+            }
+
+            if (index == -1)
+            {
+                foreach(int i in this._content)
+                    ApplicationMap.PlanContent.Delete(ApplicationMap.PlanContent[i]);
+            }
+
+            _content.Clear();
+        }
 
         private void Update(PlanContent aContent)
         {
@@ -106,6 +127,7 @@ namespace AuditHelper.Classes
 
             //Загружаем индексы 
             this._content = ApplicationDataMappers.PlanContentDM.GetAllIDs(this.Id);
-        }        
+        }
+
     }
 }

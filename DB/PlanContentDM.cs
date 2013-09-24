@@ -25,7 +25,7 @@ namespace AuditHelper.DB
                     _tbl[0].vch_correct_actions, _tbl[0].employee_ID,
                     _tbl[0].dtm_expired, _tbl[0].vch_comments, _tbl[0].risk_id, 
                     _tbl[0].Isstatus_idNull() ? -1 :_tbl[0].status_id, 
-                    _tbl[0].vch_number, _tbl[0].content_id);
+                    _tbl[0].plan_id, _tbl[0].vch_number, _tbl[0].content_id);
             }
 
             return tmp;
@@ -64,6 +64,8 @@ namespace AuditHelper.DB
         {
             if (aEntity == null)
                 return false;
+
+            _adapter.DeleteChildren(aEntity.Id);
 
             if (_adapter.Delete(aEntity.Id) >= 1)
                 return true;

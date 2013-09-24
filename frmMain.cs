@@ -78,9 +78,9 @@ namespace AuditHelper
 
         private void LoadContent()
         {
+            this.contentTV.Nodes.Clear();
             if (this._selectedPlanID == -1)
             {
-                contentTV.Nodes.Clear();
                 return;
             }
 
@@ -111,7 +111,8 @@ namespace AuditHelper
                 //Обходим потомков
                 foreach (PlanContent child in children)
                 {
-                    childNode = new TreeNode(child.Name + " " + child.Recomendation.Substring(0, 47) + "...");
+                    childNode = new TreeNode(child.Name + " " + 
+                        (child.Recomendation.Length > 47 ?  child.Recomendation.Substring(0, 47) + "..." : child.Recomendation));
                     childNode.Tag = child.Id;
                     parentNode.Nodes.Add(childNode);
                 }
@@ -131,14 +132,20 @@ namespace AuditHelper
 
         private void ShowEditPlanContentForm()
         {
-            EditPlan frm = new EditPlan();
+            EditPlanContent frm = new EditPlanContent();
             frm.EditableId = this._selectedPlanContentId;
+            frm.PlanId = this._selectedPlanID;
             if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 this.LoadContent();
         }
 
         private bool DeletePlanContentData()
         {
+            if (this._selectedPlanContentId != -1)
+            {
+                ApplicationMap.Plan[this._selectedPlanID].DeleteContent(this._selectedPlanContentId);
+                this.LoadContent();
+            }
             return true;
         }
 
@@ -328,7 +335,7 @@ namespace AuditHelper
 
         private void contentTV_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            this._selectedPlanContentId = (e.Node.Tag as SimpleEntity).Id;
+            this._selectedPlanContentId = (int)e.Node.Tag;
         }
 
         private void contentTV_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -336,24 +343,16 @@ namespace AuditHelper
             if (e.Button != System.Windows.Forms.MouseButtons.Left)
                 return;
 
-            this._selectedPlanContentId = (e.Node.Tag as SimpleEntity).Id;
+            this._selectedPlanContentId = (int)e.Node.Tag;
+            if (this._selectedPlanContentId != -1)
+                this.ShowEditPlanContentForm();
         }
 
         private void создатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*List<SimpleEntity> aaa = new List<SimpleEntity>();
-                aaa.Add(new SimpleEntity("1"));
-                aaa.Add(new SimpleEntity("1.2"));
-                aaa.Add(new SimpleEntity("1.1"));
-                aaa.Add(new SimpleEntity("2"));
-                aaa.Add(new SimpleEntity("3"));
-                aaa.Add(new SimpleEntity("2.1"));
-                aaa.Sort(SimpleEntity.CompareSimpleEntities);
-
-                foreach (SimpleEntity a in aaa)
-                    MessageBox.Show(a.Name);*/
             this._selectedPlanContentId = -1;
-            this.ShowEditPlanContentForm();
+            if (this._selectedPlanID != -1)
+                this.ShowEditPlanContentForm();
         }
 
         private void редактироватьПунктToolStripMenuItem_Click(object sender, EventArgs e)

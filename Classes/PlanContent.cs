@@ -71,7 +71,7 @@ namespace AuditHelper.Classes
 
         public PlanContent(int aParentId, string aRecomendation, string aCorrectActions,
             int aEmployeeId, DateTime aExpired, string aComments, int aRiskId,
-            int aStatusId, string aName, int aId = -1) : base(aName, aId) 
+            int aStatusId, int aPlanId, string aName, int aId = -1) : base(aName, aId) 
         {
             this._parentId = aParentId;
             this._recomendation = aRecomendation;
@@ -79,8 +79,9 @@ namespace AuditHelper.Classes
             this._employeeId = aEmployeeId;
             this._expired = aExpired;
             this._comments = aComments;
-
-        
+            this._planId = aPlanId;
+            this._riskId = aRiskId;
+            this._statusId = aStatusId;
         }
     }
 }

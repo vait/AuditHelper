@@ -67,6 +67,12 @@
     <Compile Include="DB\OutsideEmpDM.cs" />
     <Compile Include="DB\OutsideOrgDM.cs" />
     <Compile Include="DB\PlanDM.cs" />
+    <Compile Include="Forms\EditPlanContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPlanContent.Designer.cs">
+      <DependentUpon>EditPlanContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     <Compile Include="frmTestEnvironment.Designer.cs">
       <DependentUpon>frmTestEnvironment.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\EditPlanContent.resx">
+      <DependentUpon>EditPlanContent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPlan.resx">
       <DependentUpon>EditPlan.cs</DependentUpon>
     </EmbeddedResource>
