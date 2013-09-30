@@ -34,7 +34,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnDownload = new System.Windows.Forms.Button();
             this.btnInstall = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -100,6 +104,41 @@
             this.btnInstall.UseVisualStyleBackColor = true;
             this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Location = new System.Drawing.Point(12, 141);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(376, 87);
+            this.panel2.TabIndex = 3;
+            this.panel2.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.ForeColor = System.Drawing.Color.Red;
+            this.textBox2.Location = new System.Drawing.Point(27, 17);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(322, 36);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Файл базы не найден!";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(148, 59);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Закрыть";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmTestEnvironment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +146,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::AuditHelper.Properties.Resources.startup_icon;
             this.ClientSize = new System.Drawing.Size(400, 300);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbState);
             this.Controls.Add(this.progressBar1);
@@ -119,6 +159,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTestEnvironment_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +174,8 @@
         private System.Windows.Forms.Button btnDownload;
         private System.Windows.Forms.Button btnInstall;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnClose;
     }
 }

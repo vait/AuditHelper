@@ -113,6 +113,16 @@ namespace AuditHelper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Reload_16 {
+            get {
+                object obj = ResourceManager.GetObject("Reload_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ShowAll_16 {
             get {
                 object obj = ResourceManager.GetObject("ShowAll_16", resourceCulture);

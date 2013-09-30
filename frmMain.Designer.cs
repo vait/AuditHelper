@@ -28,43 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "11",
             "12",
             "13"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("2");
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("3");
-            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Node7");
-            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Node8");
-            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode107,
-            treeNode108,
-            treeNode109,
-            treeNode110,
-            treeNode111});
-            System.Windows.Forms.TreeNode treeNode113 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode114 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode115 = new System.Windows.Forms.TreeNode("Node11");
-            System.Windows.Forms.TreeNode treeNode116 = new System.Windows.Forms.TreeNode("Node12");
-            System.Windows.Forms.TreeNode treeNode117 = new System.Windows.Forms.TreeNode("Node13");
-            System.Windows.Forms.TreeNode treeNode118 = new System.Windows.Forms.TreeNode("Node14");
-            System.Windows.Forms.TreeNode treeNode119 = new System.Windows.Forms.TreeNode("Node3", new System.Windows.Forms.TreeNode[] {
-            treeNode114,
-            treeNode115,
-            treeNode116,
-            treeNode117,
-            treeNode118});
-            System.Windows.Forms.TreeNode treeNode120 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("2");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node7");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node8");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node11");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node12");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node13");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node14");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node3", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node4");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.планToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.редактироватьПунктToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьПунктToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.организацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.должностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,6 +89,8 @@
             this.prev50TSBtn = new System.Windows.Forms.ToolStripButton();
             this.next50TSBtn = new System.Windows.Forms.ToolStripButton();
             this.allTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.reloadTSBtn = new System.Windows.Forms.ToolStripButton();
             this.plansLV = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -96,10 +102,6 @@
             this.editItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.deleteItemTSBtn = new System.Windows.Forms.ToolStripButton();
             this.contentTV = new System.Windows.Forms.TreeView();
-            this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.редактироватьПунктToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьПунктToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -153,6 +155,37 @@
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            // 
+            // содержаниеToolStripMenuItem
+            // 
+            this.содержаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.создатьToolStripMenuItem1,
+            this.редактироватьПунктToolStripMenuItem,
+            this.удалитьПунктToolStripMenuItem});
+            this.содержаниеToolStripMenuItem.Name = "содержаниеToolStripMenuItem";
+            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.содержаниеToolStripMenuItem.Text = "Содержание";
+            // 
+            // создатьToolStripMenuItem1
+            // 
+            this.создатьToolStripMenuItem1.Name = "создатьToolStripMenuItem1";
+            this.создатьToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.создатьToolStripMenuItem1.Text = "Создать пункт";
+            this.создатьToolStripMenuItem1.Click += new System.EventHandler(this.создатьToolStripMenuItem1_Click);
+            // 
+            // редактироватьПунктToolStripMenuItem
+            // 
+            this.редактироватьПунктToolStripMenuItem.Name = "редактироватьПунктToolStripMenuItem";
+            this.редактироватьПунктToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.редактироватьПунктToolStripMenuItem.Text = "Редактировать пункт";
+            this.редактироватьПунктToolStripMenuItem.Click += new System.EventHandler(this.редактироватьПунктToolStripMenuItem_Click);
+            // 
+            // удалитьПунктToolStripMenuItem
+            // 
+            this.удалитьПунктToolStripMenuItem.Name = "удалитьПунктToolStripMenuItem";
+            this.удалитьПунктToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.удалитьПунктToolStripMenuItem.Text = "Удалить пункт";
+            this.удалитьПунктToolStripMenuItem.Click += new System.EventHandler(this.удалитьПунктToolStripMenuItem_Click);
             // 
             // справочникиToolStripMenuItem
             // 
@@ -288,7 +321,9 @@
             this.toolStripSeparator1,
             this.prev50TSBtn,
             this.next50TSBtn,
-            this.allTSBtn});
+            this.allTSBtn,
+            this.toolStripSeparator2,
+            this.reloadTSBtn});
             this.toolStrip1.Location = new System.Drawing.Point(3, 383);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(550, 25);
@@ -368,6 +403,21 @@
             this.allTSBtn.ToolTipText = "Все записи";
             this.allTSBtn.CheckStateChanged += new System.EventHandler(this.allTSBtn_CheckStateChanged);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // reloadTSBtn
+            // 
+            this.reloadTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.reloadTSBtn.Image = global::AuditHelper.Properties.Resources.Reload_16;
+            this.reloadTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.reloadTSBtn.Name = "reloadTSBtn";
+            this.reloadTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.reloadTSBtn.Text = "Перечитать";
+            this.reloadTSBtn.Click += new System.EventHandler(this.reloadTSBtn_Click);
+            // 
             // plansLV
             // 
             this.plansLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -382,9 +432,9 @@
             this.plansLV.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.plansLV.HideSelection = false;
             this.plansLV.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem22,
-            listViewItem23,
-            listViewItem24});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.plansLV.Location = new System.Drawing.Point(3, 16);
             this.plansLV.MultiSelect = false;
             this.plansLV.Name = "plansLV";
@@ -483,77 +533,46 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentTV.Location = new System.Drawing.Point(3, 16);
             this.contentTV.Name = "contentTV";
-            treeNode106.Name = "Node0";
-            treeNode106.Text = "Node0";
-            treeNode107.Name = "Node5";
-            treeNode107.Text = "Node5";
-            treeNode108.Name = "Node6";
-            treeNode108.Text = "Node6";
-            treeNode109.Name = "Node7";
-            treeNode109.Text = "Node7";
-            treeNode110.Name = "Node8";
-            treeNode110.Text = "Node8";
-            treeNode111.Name = "Node9";
-            treeNode111.Text = "Node9";
-            treeNode112.Name = "Node1";
-            treeNode112.Text = "Node1";
-            treeNode113.Name = "Node2";
-            treeNode113.Text = "Node2";
-            treeNode114.Name = "Node10";
-            treeNode114.Text = "Node10";
-            treeNode115.Name = "Node11";
-            treeNode115.Text = "Node11";
-            treeNode116.Name = "Node12";
-            treeNode116.Text = "Node12";
-            treeNode117.Name = "Node13";
-            treeNode117.Text = "Node13";
-            treeNode118.Name = "Node14";
-            treeNode118.Text = "Node14";
-            treeNode119.Name = "Node3";
-            treeNode119.Text = "Node3";
-            treeNode120.Name = "Node4";
-            treeNode120.Text = "Node4";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Node0";
+            treeNode2.Name = "Node5";
+            treeNode2.Text = "Node5";
+            treeNode3.Name = "Node6";
+            treeNode3.Text = "Node6";
+            treeNode4.Name = "Node7";
+            treeNode4.Text = "Node7";
+            treeNode5.Name = "Node8";
+            treeNode5.Text = "Node8";
+            treeNode6.Name = "Node9";
+            treeNode6.Text = "Node9";
+            treeNode7.Name = "Node1";
+            treeNode7.Text = "Node1";
+            treeNode8.Name = "Node2";
+            treeNode8.Text = "Node2";
+            treeNode9.Name = "Node10";
+            treeNode9.Text = "Node10";
+            treeNode10.Name = "Node11";
+            treeNode10.Text = "Node11";
+            treeNode11.Name = "Node12";
+            treeNode11.Text = "Node12";
+            treeNode12.Name = "Node13";
+            treeNode12.Text = "Node13";
+            treeNode13.Name = "Node14";
+            treeNode13.Text = "Node14";
+            treeNode14.Name = "Node3";
+            treeNode14.Text = "Node3";
+            treeNode15.Name = "Node4";
+            treeNode15.Text = "Node4";
             this.contentTV.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode106,
-            treeNode112,
-            treeNode113,
-            treeNode119,
-            treeNode120});
+            treeNode1,
+            treeNode7,
+            treeNode8,
+            treeNode14,
+            treeNode15});
             this.contentTV.Size = new System.Drawing.Size(251, 364);
             this.contentTV.TabIndex = 2;
             this.contentTV.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.contentTV_AfterSelect);
             this.contentTV.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.contentTV_NodeMouseDoubleClick);
-            // 
-            // содержаниеToolStripMenuItem
-            // 
-            this.содержаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.создатьToolStripMenuItem1,
-            this.редактироватьПунктToolStripMenuItem,
-            this.удалитьПунктToolStripMenuItem});
-            this.содержаниеToolStripMenuItem.Name = "содержаниеToolStripMenuItem";
-            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.содержаниеToolStripMenuItem.Text = "Содержание";
-            // 
-            // создатьToolStripMenuItem1
-            // 
-            this.создатьToolStripMenuItem1.Name = "создатьToolStripMenuItem1";
-            this.создатьToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
-            this.создатьToolStripMenuItem1.Text = "Создать пункт";
-            this.создатьToolStripMenuItem1.Click += new System.EventHandler(this.создатьToolStripMenuItem1_Click);
-            // 
-            // редактироватьПунктToolStripMenuItem
-            // 
-            this.редактироватьПунктToolStripMenuItem.Name = "редактироватьПунктToolStripMenuItem";
-            this.редактироватьПунктToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.редактироватьПунктToolStripMenuItem.Text = "Редактировать пункт";
-            this.редактироватьПунктToolStripMenuItem.Click += new System.EventHandler(this.редактироватьПунктToolStripMenuItem_Click);
-            // 
-            // удалитьПунктToolStripMenuItem
-            // 
-            this.удалитьПунктToolStripMenuItem.Name = "удалитьПунктToolStripMenuItem";
-            this.удалитьПунктToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.удалитьПунктToolStripMenuItem.Text = "Удалить пункт";
-            this.удалитьПунктToolStripMenuItem.Click += new System.EventHandler(this.удалитьПунктToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -631,6 +650,8 @@
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem редактироватьПунктToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьПунктToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton reloadTSBtn;
     }
 }
 

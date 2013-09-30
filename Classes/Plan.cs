@@ -97,9 +97,9 @@ namespace AuditHelper.Classes
             {
                 foreach(int i in this._content)
                     ApplicationMap.PlanContent.Delete(ApplicationMap.PlanContent[i]);
-            }
 
-            _content.Clear();
+                _content.Clear();
+            }
         }
 
         private void Update(PlanContent aContent)
@@ -109,7 +109,7 @@ namespace AuditHelper.Classes
                 this._endDate = aContent.Expired;
 
             //Проверяем даты завершения
-            if (aContent.StatusId != -1)
+            if (aContent.StatusId == -1)
                 if (aContent.Expired < this.NearestDate)
                     this._nearestDate = aContent.Expired;
         }

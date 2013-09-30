@@ -49,6 +49,7 @@ namespace AuditHelper
 
             plansLV.BeginUpdate();
             plansLV.Items.Clear();
+            contentTV.Nodes.Clear();
 
             foreach (Plan pl in plans)
             {
@@ -67,7 +68,7 @@ namespace AuditHelper
                         lvi.BackColor = Color.Red;
 
                     if (pl.NearestDate <= DateTime.Now.AddDays(4) && pl.NearestDate > DateTime.Now)
-                        lvi.BackColor = Color.DodgerBlue;
+                        lvi.BackColor = Color.LightBlue;
                 }
 
                 plansLV.Items.Add(lvi);
@@ -78,7 +79,6 @@ namespace AuditHelper
 
         private void LoadContent()
         {
-            this.contentTV.Nodes.Clear();
             if (this._selectedPlanID == -1)
             {
                 return;
@@ -101,6 +101,9 @@ namespace AuditHelper
             //Вывод
             TreeNode parentNode, childNode;
 
+            contentTV.BeginUpdate();
+            this.contentTV.Nodes.Clear();
+
             foreach (PlanContent parent in parents)
             {
                 parentNode = new TreeNode(parent.Name + " " + parent.Recomendation);
@@ -120,6 +123,8 @@ namespace AuditHelper
 
                 this.contentTV.Nodes.Add(parentNode);
             }
+
+            contentTV.EndUpdate();
         }
 
         private void ShowEditPlanForm()
@@ -130,9 +135,10 @@ namespace AuditHelper
                 this.LoadPlans();
         }
 
-        private void ShowEditPlanContentForm()
+        private void ShowEditPlanContentForm(int aParent = -1)
         {
             EditPlanContent frm = new EditPlanContent();
+            frm.ParentId = aParent;
             frm.EditableId = this._selectedPlanContentId;
             frm.PlanId = this._selectedPlanID;
             if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -154,8 +160,7 @@ namespace AuditHelper
             //Удаляем пункты плана
             try
             {
-                //ApplicationMap.Plan[_selectedPlanID].
-                //ApplicationMap.LevelsOfRisk.Delete(ApplicationMap.LevelsOfRisk[_selectedID]);
+                ApplicationMap.Plan[_selectedPlanID].DeleteContent(-1);
             }
             catch
             {
@@ -165,8 +170,7 @@ namespace AuditHelper
             //Удаляем сам план
             try
             {
-                //Удаляем 
-                //ApplicationMap.LevelsOfRisk.Delete(ApplicationMap.LevelsOfRisk[_selectedID]);
+                ApplicationMap.Plan.Delete(ApplicationMap.Plan[_selectedPlanID]);
             }
             catch
             {
@@ -174,6 +178,7 @@ namespace AuditHelper
             }
 
             this.LoadPlans();
+            this.UpdateStatusBar();
             return true;
         }
 
@@ -350,9 +355,10 @@ namespace AuditHelper
 
         private void создатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            int tmp = this._selectedPlanContentId;
             this._selectedPlanContentId = -1;
             if (this._selectedPlanID != -1)
-                this.ShowEditPlanContentForm();
+                this.ShowEditPlanContentForm(tmp);
         }
 
         private void редактироватьПунктToolStripMenuItem_Click(object sender, EventArgs e)
@@ -374,6 +380,13 @@ namespace AuditHelper
             if (this.DeletePlanContentData())
                 MessageBox.Show("Запись успешно удалена", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void reloadTSBtn_Click(object sender, EventArgs e)
+        {
+            this.LoadPlans();
+            this.UpdateStatusBar();
+        }
+
 
     }
 }

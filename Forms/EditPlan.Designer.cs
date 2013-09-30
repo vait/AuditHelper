@@ -48,7 +48,7 @@
             this.cancelBtn.Location = new System.Drawing.Point(269, 223);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
-            this.cancelBtn.TabIndex = 5;
+            this.cancelBtn.TabIndex = 6;
             this.cancelBtn.Text = "Отмена";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -59,7 +59,7 @@
             this.saveBtn.Location = new System.Drawing.Point(12, 223);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(75, 23);
-            this.saveBtn.TabIndex = 4;
+            this.saveBtn.TabIndex = 5;
             this.saveBtn.Text = "Сохранить";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
@@ -78,7 +78,7 @@
             this.nameTB.Location = new System.Drawing.Point(13, 25);
             this.nameTB.Name = "nameTB";
             this.nameTB.Size = new System.Drawing.Size(332, 20);
-            this.nameTB.TabIndex = 6;
+            this.nameTB.TabIndex = 0;
             // 
             // label4
             // 
@@ -97,7 +97,7 @@
             this.emp1IDCmB.Location = new System.Drawing.Point(13, 116);
             this.emp1IDCmB.Name = "emp1IDCmB";
             this.emp1IDCmB.Size = new System.Drawing.Size(332, 21);
-            this.emp1IDCmB.TabIndex = 14;
+            this.emp1IDCmB.TabIndex = 2;
             // 
             // emp2IDCmB
             // 
@@ -107,7 +107,7 @@
             this.emp2IDCmB.Location = new System.Drawing.Point(12, 156);
             this.emp2IDCmB.Name = "emp2IDCmB";
             this.emp2IDCmB.Size = new System.Drawing.Size(332, 21);
-            this.emp2IDCmB.TabIndex = 16;
+            this.emp2IDCmB.TabIndex = 3;
             // 
             // label2
             // 
@@ -126,7 +126,7 @@
             this.emp3IDCmB.Location = new System.Drawing.Point(13, 196);
             this.emp3IDCmB.Name = "emp3IDCmB";
             this.emp3IDCmB.Size = new System.Drawing.Size(332, 21);
-            this.emp3IDCmB.TabIndex = 18;
+            this.emp3IDCmB.TabIndex = 4;
             // 
             // label3
             // 
@@ -145,7 +145,7 @@
             this.orgIDCmB.Location = new System.Drawing.Point(13, 64);
             this.orgIDCmB.Name = "orgIDCmB";
             this.orgIDCmB.Size = new System.Drawing.Size(332, 21);
-            this.orgIDCmB.TabIndex = 20;
+            this.orgIDCmB.TabIndex = 1;
             // 
             // label5
             // 

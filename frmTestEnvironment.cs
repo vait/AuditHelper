@@ -72,5 +72,17 @@ namespace AuditHelper
             _endOfLoading = true;
             this.Close();            
         }
+
+        internal void NotFoundDB()
+        {
+            this.panel2.BringToFront();
+            this.panel2.Visible = true;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _endOfLoading = true;
+            this.Close();
+        }
     }
 }

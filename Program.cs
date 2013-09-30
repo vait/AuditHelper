@@ -65,21 +65,31 @@ namespace AuditHelper
         {
             BackgroundWorker worker = sender as BackgroundWorker;
             worker.ReportProgress(0, "Проверка подключения к базе...");
-            try
-            {
-                System.Data.OleDb.OleDbConnection _connection = new System.Data.OleDb.OleDbConnection();
-                _connection.ConnectionString = AuditHelper.Properties.Settings.Default.auditHelperConnectionString;
-                _connection.Open();
-                _connection.Close();
-
-            }
-            catch
+            string path = System.IO.Path.Combine(Application.StartupPath, "DB\\auditHelper.mdb");
+            if (!System.IO.File.Exists(path))
             {
                 isReady = false;
                 worker.ReportProgress(0, "");
-                worker.ReportProgress(1, "Ошибка подключения к базе");
+                worker.ReportProgress(2, "Файл базы не найден");
             }
+            else
+            {
 
+                try
+                {
+                    System.Data.OleDb.OleDbConnection _connection = new System.Data.OleDb.OleDbConnection();
+                    _connection.ConnectionString = AuditHelper.Properties.Settings.Default.auditHelperConnectionString;
+                    _connection.Open();
+                    _connection.Close();
+
+                }
+                catch
+                {
+                    isReady = false;
+                    worker.ReportProgress(0, "");
+                    worker.ReportProgress(1, "Ошибка подключения к базе");
+                }
+            }
             //Соединение установлено, загружаем словари
             if (isReady)
             {
@@ -159,6 +169,9 @@ namespace AuditHelper
                     break;
                 case 1:
                     loadWindow.ShowInfoUpdate();
+                    break;
+                case 2:
+                    loadWindow.NotFoundDB();
                     break;
             }
         }

@@ -23,7 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -231,6 +231,8 @@
     <Content Include="Images\Next_32.png" />
     <Content Include="Images\Previous_16.png" />
     <Content Include="Images\Previous_32.png" />
+    <Content Include="Images\Reload_16.png" />
+    <Content Include="Images\Reload_32.png" />
     <Content Include="Images\ShowAll_16.png" />
     <Content Include="Images\startup_icon.jpg" />
     <Content Include="Images\startup_icon.png" />
