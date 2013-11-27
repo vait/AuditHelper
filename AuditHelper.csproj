@@ -46,6 +46,7 @@
     <Compile Include="Classes\ContentStatus.cs" />
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\LevelOfRisk.cs" />
+    <Compile Include="Classes\Orders.cs" />
     <Compile Include="Classes\OutsideEmp.cs" />
     <Compile Include="Classes\OutsideOrg.cs" />
     <Compile Include="Classes\Plan.cs" />
@@ -212,7 +213,35 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DB\AccessDatabaseEngine.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -227,6 +256,7 @@
     <Content Include="Images\Delete_32.png" />
     <Content Include="Images\Edit_16.png" />
     <Content Include="Images\Edit_32.png" />
+    <Content Include="Images\Excel_16.png" />
     <Content Include="Images\Next_16.png" />
     <Content Include="Images\Next_32.png" />
     <Content Include="Images\Previous_16.png" />

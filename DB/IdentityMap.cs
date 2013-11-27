@@ -20,7 +20,7 @@ namespace AuditHelper.DB
         {
             lock (_getLock)
             {
-                T entity;
+                T entity = null;
 
                 if (!_entities.TryGetValue(id, out entity))
                 {

@@ -17,6 +17,7 @@ namespace AuditHelper
         public static bool isReady = true;
         public static int countNearestExpired = 0;
         public static int countExpired = 0;
+        public static string startupPath = Application.StartupPath;
         
         [DllImport("kernel32.dll", SetLastError = true, CallingConvention = CallingConvention.Winapi)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -65,7 +66,7 @@ namespace AuditHelper
         {
             BackgroundWorker worker = sender as BackgroundWorker;
             worker.ReportProgress(0, "Проверка подключения к базе...");
-            string path = System.IO.Path.Combine(Application.StartupPath, "DB\\auditHelper.mdb");
+            string path = System.IO.Path.Combine(startupPath, "DB\\auditHelper.mdb");
             if (!System.IO.File.Exists(path))
             {
                 isReady = false;

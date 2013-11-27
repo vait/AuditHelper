@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "11",
@@ -74,6 +75,8 @@
             this.должностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.уровниРискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.статусыРекомендацийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.планКорректирующихМероприятийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.pageSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.totalPlansSSL = new System.Windows.Forms.ToolStripStatusLabel();
@@ -118,7 +121,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.планToolStripMenuItem,
             this.содержаниеToolStripMenuItem,
-            this.справочникиToolStripMenuItem});
+            this.справочникиToolStripMenuItem,
+            this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(817, 24);
@@ -225,6 +229,24 @@
             this.статусыРекомендацийToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.статусыРекомендацийToolStripMenuItem.Text = "Статусы рекомендаций";
             this.статусыРекомендацийToolStripMenuItem.Click += new System.EventHandler(this.статусыРекомендацийToolStripMenuItem_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.планКорректирующихМероприятийToolStripMenuItem});
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // планКорректирующихМероприятийToolStripMenuItem
+            // 
+            this.планКорректирующихМероприятийToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("планКорректирующихМероприятийToolStripMenuItem.Image")));
+            this.планКорректирующихМероприятийToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.планКорректирующихМероприятийToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.планКорректирующихМероприятийToolStripMenuItem.Name = "планКорректирующихМероприятийToolStripMenuItem";
+            this.планКорректирующихМероприятийToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
+            this.планКорректирующихМероприятийToolStripMenuItem.Text = "План корректирующих мероприятий";
+            this.планКорректирующихМероприятийToolStripMenuItem.Click += new System.EventHandler(this.планКорректирующихМероприятийToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -652,6 +674,8 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьПунктToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton reloadTSBtn;
+        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem планКорректирующихМероприятийToolStripMenuItem;
     }
 }
 

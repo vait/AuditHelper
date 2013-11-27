@@ -11,7 +11,6 @@ using AuditHelper.Forms;
 using AuditHelper.DB;
 using AuditHelper.Classes;
 
-
 namespace AuditHelper
 {
     public partial class frmMain : Form
@@ -387,6 +386,11 @@ namespace AuditHelper
             this.UpdateStatusBar();
         }
 
-
+        private void планКорректирующихМероприятийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this._selectedPlanID != -1)
+                Orders.Instance.MakeCAPEx(this._selectedPlanID);
+        }
+        
     }
 }
