@@ -221,6 +221,48 @@ namespace AuditHelper.Classes
             }
 
             //Выводим подписи
+            row += 2;
+            workRange = _exSht.get_Range("b" + row.ToString());
+            workRange.Font.Bold = true;
+            workRange.Font.Size = 12;
+            range.Cells[row, 2] = "Согласовано";
+
+            row += 2;
+            OutsideEmp emp = null;
+            OutsideOrg orge = null;
+            emp = ApplicationMap.OutsideEmp[plan.Employee1ID];
+            orge = ApplicationMap.OutsideOrg[emp.OrgID];
+            workRange = _exSht.get_Range("b" + row.ToString(), "c" + row.ToString());
+            workRange.Font.Size = 12;
+            range.Cells[row, 2] = emp.PostName + " " + orge.FullName;
+            range.Cells[row, 3] = emp.GetFIO();
+
+            if (plan.Employee2ID != -1)
+            {
+                row += 2;
+                emp = null;
+                orge = null;
+                emp = ApplicationMap.OutsideEmp[plan.Employee2ID];
+                orge = ApplicationMap.OutsideOrg[emp.OrgID];
+                workRange = _exSht.get_Range("b" + row.ToString(), "c" + row.ToString());
+                workRange.Font.Size = 12;
+                range.Cells[row, 2] = emp.PostName + " " + orge.FullName;
+                range.Cells[row, 3] = emp.GetFIO();
+            }
+
+            if (plan.Employee3ID != -1)
+            {
+                row += 2;
+                emp = null;
+                orge = null;
+                emp = ApplicationMap.OutsideEmp[plan.Employee3ID];
+                orge = ApplicationMap.OutsideOrg[emp.OrgID];
+                workRange = _exSht.get_Range("b" + row.ToString(), "c" + row.ToString());
+                workRange.Font.Size = 12;
+                range.Cells[row, 2] = emp.PostName + " " + orge.FullName;
+                range.Cells[row, 3] = emp.GetFIO();
+            }
+
 
             this.TerminateExcel();
             return result;

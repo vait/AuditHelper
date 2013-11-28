@@ -61,5 +61,9 @@ namespace AuditHelper.Classes
                 " " + this.LastName + " [" + this.PostName + "] ";
         }
 
+        public string GetFIO()
+        {
+            return this.LastName + " " + this.Name[0]+". " + (!String.IsNullOrEmpty(this.MiddleName) ? this.MiddleName[0] + "." : "");
+        }
     }
 }
